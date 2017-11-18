@@ -6,4 +6,4 @@ In a mythical foreign country, a critical part of the subway, the Downtown Line,
 
 A 5x5 grid made up of hexagonal tiles is given to the player, each tile containing a scrambled segment of the pipe. Each tile may have 8 different shapes. The player has to rotate the segments of the pipe systematically until they are all connected, draining the tunnel.
 
-High achieving players might even be rewarded with something special.
+Achieving players might even be rewarded with something special.
