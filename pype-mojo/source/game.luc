@@ -1,0 +1,71 @@
+module game (
+    input clk,
+    
+    // Selector direction inputs
+    input left,
+    input right,
+    input up, 
+    input down,
+    
+    // Tile rotation inputs
+    input rotate_left,
+    input rotate_right,
+    
+    // Output
+    output vga_R,
+    output vga_G,
+    output vga_B,
+    output vga_v_sync,
+    output vga_v_hsync
+  ) {
+
+  .clk(clk) {
+  
+    // All the tiles that exist to be selected.
+    fsm select_tile = {S00, S01, S10, S11};
+  }
+  
+    
+  always {
+  
+    level1.tile1x = 0;
+    level1.tile1y = 0;
+    level1.tile1orientation = 0;
+  
+    case(select_tile.q) {
+      
+      select_tile.S00:
+        
+        if (rotate_left)
+          // level1.tile1orientation = level1.tile1neworientation - 1;
+          alu.alufn = 000001; // set alu to adder subtraction
+          alu.a = level1.tile1neworientation;
+          alu.b = 1;
+          level1.tile1orientation = alu.out;
+        
+        if (rotate_right)
+          // level1.tile1orientation = level1.tile1neworientation + 1;
+          alu.alufn = 000000; // set alu to adder addition
+          alu.a = level1.tile1neworientation;
+          alu.b = 1;
+          level1.tile1orientation = alu.out;
+              
+        if (left)
+          select_tile.d = select_tile.S10;
+        
+        if (right)
+          select_tile.d = select_tile.S10;
+          
+        if (up)
+          select_tile.d = select_tile.S10;
+          
+        if (down)
+          select_tile.d = select_tile.S10;       
+          
+        
+        
+      
+    }
+    
+  }
+}

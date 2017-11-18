@@ -1,0 +1,22 @@
+module tile (
+    input pos_x,
+    input pos_y,
+    input orientation,
+    output newOrientation
+  ) {
+  
+  sig temp;
+  
+  always {
+  
+    temp = orientation;
+    newOrientation = temp;
+    
+    if (orientation > 5)
+      newOrientation = 0;
+      
+    if (orientation < 0)
+      newOrientation = 5;
+ 
+  }
+}
