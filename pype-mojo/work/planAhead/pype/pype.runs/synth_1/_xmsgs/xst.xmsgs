@@ -17,7 +17,7 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 33: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 73: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 73: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 79: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.

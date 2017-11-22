@@ -5,7 +5,7 @@
     <File Path="$PSRCDIR/sources_1/imports/verilog/hvsync_generator_1.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../verilog/hvsync_generator_1.v"/>
-        <Attr Name="ImportTime" Val="1511342646"/>
+        <Attr Name="ImportTime" Val="1511359920"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>
@@ -14,7 +14,7 @@
     <File Path="$PSRCDIR/sources_1/imports/verilog/mojo_top_0.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../verilog/mojo_top_0.v"/>
-        <Attr Name="ImportTime" Val="1511342646"/>
+        <Attr Name="ImportTime" Val="1511359920"/>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
         <Attr Name="UsedInSimulation" Val="1"/>

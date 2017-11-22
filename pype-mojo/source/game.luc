@@ -3,6 +3,9 @@
 module game (
     input clk,
     
+    // reset button
+    input reset,
+    
     // Selector direction inputs
     input left,
     input right,
@@ -14,18 +17,16 @@ module game (
     input rotate_right
     
     // Output
-    output vga_R,
-    output vga_G,
-    output vga_B,
-    output vga_v_sync,
-    output vga_v_hsync
+    //output vga_R,
+    //output vga_G,
+    //output vga_B,
+    //output vga_v_sync,
+    //output vga_v_hsync
   ) {
 
   .clk(clk) {
   
-    
     // TODO: Instantiate an 8-bit ALU
-        
     // 'screen' is the main state machine of the entire game.
     // it switches between the various screens in pype.
     fsm screen = {TITLE, LOAD_GAME, GAME_WAIT, GAME_CHECK_SOLUTION, WIN_LEVEL, WIN_GAME, GAME_OVER};
@@ -38,6 +39,7 @@ module game (
   sig selectedTile;
   
   sig numberOfWins;
+  solutions solution;
   const MAX_WINS = 5;
     
   always {
@@ -45,6 +47,7 @@ module game (
     // set values of global variables
     selectedTile = 0;
     numberOfWins = 0;
+    solution.puzzle_number = 0;
     rotation = 0; // TODO: write randomizer to randomize rotations. For now, set all to 0 (northeast)
     
     // set boundaries for tile addressing.
@@ -66,6 +69,9 @@ module game (
         
         // render game ui and puzzle here
         
+        // choose the puzzle
+        solution.puzzle_number = 1;
+        
         // check done, then go to GAME_WAIT
         screen.d = screen.GAME_WAIT;
         
@@ -73,8 +79,8 @@ module game (
         
         // listen for up, down, left and right
         // potential problems: both buttons pressed at same time?
-        case (up || down || left || right) {  
-        
+        case (up || down || left || right) {
+
           up:
             selectedTile = selectedTile - 5;
           
@@ -100,6 +106,7 @@ module game (
             rotation[selectedTile] = rotation[selectedTile] + 1;
             
           // render new tile image as a function of rotation[]
+            
         }
         
         // listen for reset, goto TITLE
@@ -110,7 +117,7 @@ module game (
       screen.GAME_CHECK_SOLUTION:
       
         // check if current 2D array of solutions matches a solution
-        if (match) {
+        if (rotation == solution.correct_solution) {
           screen.d = screen.WIN_LEVEL;
         }
         
@@ -119,6 +126,7 @@ module game (
         // check if wins = MAX_WINS, if true goto WIN_GAME
         if (numberOfWins == MAX_WINS) {
           screen.d = screen.WIN_GAME;
+          
         }
         
       screen.WIN_GAME:
@@ -127,7 +135,7 @@ module game (
         // enter name if high score
         // execute teh bing dispenser
         
-        //if reset, goto TITLE
+        // if reset, goto TITLE
         if (reset) {
           screen.d = screen.TITLE;
         }

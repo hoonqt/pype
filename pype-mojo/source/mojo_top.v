@@ -35,12 +35,12 @@ begin
 end
 
 /////////////////////////////////////////////////////////////////
-reg [9:0] ballX;
+reg [10:0] ballX;
 reg [8:0] ballY;
 reg ball_inX, ball_inY;
 
 always @(posedge clk)
-if(ball_inX==0) ball_inX <= (CounterX==ballX) & ball_inY; else ball_inX <= !(CounterX==ballX+16);
+if(ball_inX==0) ball_inX <= (CounterX==ballX) & ball_inY; else ball_inX <= !(CounterX==ballX+32);
 
 always @(posedge clk)
 if(ball_inY==0) ball_inY <= (CounterY==ballY); else ball_inY <= !(CounterY==ballY+16);
@@ -48,8 +48,8 @@ if(ball_inY==0) ball_inY <= (CounterY==ballY); else ball_inY <= !(CounterY==ball
 wire ball = ball_inX & ball_inY;
 
 /////////////////////////////////////////////////////////////////
-wire border = (CounterX[9:3]==0) || (CounterX[9:3]==79) || (CounterY[8:3]==0) || (CounterY[8:3]==59);
-wire paddle = (CounterX>=PaddlePosition+8) && (CounterX<=PaddlePosition+120) && (CounterY[8:4]==27);
+wire border = (CounterX[10:4]==0) || (CounterX[10:4]==79) || (CounterY[8:3]==0) || (CounterY[8:3]==59);
+wire paddle = (CounterX>=PaddlePosition+16) && (CounterX<=PaddlePosition+240) && (CounterY[8:4]==27);
 wire BouncingObject = border | paddle; // active if the border or paddle is redrawing itself
 
 reg ResetCollision;
@@ -57,9 +57,9 @@ always @(posedge clk) ResetCollision <= (CounterY==500) & (CounterX==0);  // act
 
 reg CollisionX1, CollisionX2, CollisionY1, CollisionY2;
 always @(posedge clk) if(ResetCollision) CollisionX1<=0; else if(BouncingObject & (CounterX==ballX   ) & (CounterY==ballY+ 8)) CollisionX1<=1;
-always @(posedge clk) if(ResetCollision) CollisionX2<=0; else if(BouncingObject & (CounterX==ballX+16) & (CounterY==ballY+ 8)) CollisionX2<=1;
-always @(posedge clk) if(ResetCollision) CollisionY1<=0; else if(BouncingObject & (CounterX==ballX+ 8) & (CounterY==ballY   )) CollisionY1<=1;
-always @(posedge clk) if(ResetCollision) CollisionY2<=0; else if(BouncingObject & (CounterX==ballX+ 8) & (CounterY==ballY+16)) CollisionY2<=1;
+always @(posedge clk) if(ResetCollision) CollisionX2<=0; else if(BouncingObject & (CounterX==ballX+32) & (CounterY==ballY+ 8)) CollisionX2<=1;
+always @(posedge clk) if(ResetCollision) CollisionY1<=0; else if(BouncingObject & (CounterX==ballX+ 16) & (CounterY==ballY   )) CollisionY1<=1;
+always @(posedge clk) if(ResetCollision) CollisionY2<=0; else if(BouncingObject & (CounterX==ballX+ 16) & (CounterY==ballY+16)) CollisionY2<=1;
 
 /////////////////////////////////////////////////////////////////
 wire UpdateBallPosition = ResetCollision;  // update the ball position at the same time that we reset the collision detectors
@@ -82,7 +82,7 @@ begin
 end 
 
 /////////////////////////////////////////////////////////////////
-wire R = BouncingObject | ball | (CounterX[3] ^ CounterY[3]);
+wire R = BouncingObject | ball | (CounterX[4] ^ CounterY[3]);
 wire G = BouncingObject | ball;
 wire B = BouncingObject | ball;
 
