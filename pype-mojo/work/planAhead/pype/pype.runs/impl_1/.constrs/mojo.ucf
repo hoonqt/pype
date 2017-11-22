@@ -1,0 +1,16 @@
+NET "clk" TNM_NET = "clk";
+TIMESPEC TS_clk = PERIOD "clk" 25 MHz HIGH 50 %;
+
+NET "clk" LOC = P56;
+NET "clk" IOSTANDARD = LVTTL;
+
+NET "vga_R" LOC = P24;
+NET "vga_R" IOSTANDARD = LVTTL;
+NET "vga_G" LOC = P22;
+NET "vga_G" IOSTANDARD = LVTTL;
+NET "vga_B" LOC = P17;
+NET "vga_B" IOSTANDARD = LVTTL;
+NET "vga_h_sync" LOC = P15;
+NET "vga_h_sync" IOSTANDARD = LVTTL;
+NET "vga_v_sync" LOC = P12;
+NET "vga_v_sync" IOSTANDARD = LVTTL;

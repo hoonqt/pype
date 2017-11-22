@@ -1,4 +1,4 @@
-module hvsync_generator(clk, vga_h_sync, vga_v_sync, inDisplayArea, CounterX, CounterY);
+module hvsync_generator_1(clk, vga_h_sync, vga_v_sync, inDisplayArea, CounterX, CounterY);
 input clk;
 output vga_h_sync, vga_v_sync;
 output inDisplayArea;

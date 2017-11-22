@@ -1,0 +1,49 @@
+module solutions (
+    input puzzle_number,
+    output correct_solution[25]
+  ) {
+    
+  always {
+  
+    // Set output to 0 to avoid errors
+    correct_solution = 0;
+    
+    
+    // Modify output based on puzzle_number
+    case(puzzle_number) {
+    
+      // Format of solution data
+      //
+      // Puzzle number:
+      //   correct_solution[tile_no] = rotation_value;
+      
+      1:
+        correct_solution[0] = 0;
+        correct_solution[1] = 2;
+        correct_solution[2] = 3;
+        correct_solution[3] = 4;
+        correct_solution[4] = 0;
+        correct_solution[5] = 1;
+        correct_solution[6] = 2;
+        correct_solution[7] = 2;
+        correct_solution[8] = 3;
+        correct_solution[9] = 3;
+        correct_solution[10] = 0;
+        correct_solution[11] = 1;
+        correct_solution[12] = 4;
+        correct_solution[13] = 4;
+        correct_solution[14] = 2;
+        correct_solution[15] = 0;
+        correct_solution[16] = 1;
+        correct_solution[17] = 1;
+        correct_solution[18] = 3;
+        correct_solution[19] = 2;
+        correct_solution[20] = 2;
+        correct_solution[21] = 4;
+        correct_solution[22] = 1;
+        correct_solution[23] = 1;
+        correct_solution[24] = 2;
+        
+    }
+  }
+}

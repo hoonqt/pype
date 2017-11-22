@@ -1,0 +1,35 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Nov 22 17:24:44 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "vga_G" LOCATE = SITE "P22" LEVEL 1;
+COMP "vga_B" LOCATE = SITE "P17" LEVEL 1;
+COMP "vga_h_sync" LOCATE = SITE "P15" LEVEL 1;
+COMP "vga_v_sync" LOCATE = SITE "P12" LEVEL 1;
+COMP "vga_R" LOCATE = SITE "P24" LEVEL 1;
+TIMEGRP clk = BEL "ball_inX" BEL "quadBr_2" BEL "ball_inY" BEL "quadAr_2" BEL
+        "ResetCollision" BEL "ballX_0" BEL "ballX_1" BEL "ballX_2" BEL
+        "ballX_3" BEL "ballX_4" BEL "ballX_5" BEL "ballX_6" BEL "ballX_7" BEL
+        "ballX_8" BEL "ballX_9" BEL "ballY_0" BEL "ballY_1" BEL "ballY_2" BEL
+        "ballY_3" BEL "ballY_4" BEL "ballY_5" BEL "ballY_6" BEL "ballY_7" BEL
+        "ballY_8" BEL "PaddlePosition_0" BEL "PaddlePosition_1" BEL
+        "PaddlePosition_2" BEL "PaddlePosition_3" BEL "PaddlePosition_4" BEL
+        "PaddlePosition_5" BEL "PaddlePosition_6" BEL "PaddlePosition_7" BEL
+        "PaddlePosition_8" BEL "CollisionX1" BEL "CollisionX2" BEL
+        "CollisionY1" BEL "CollisionY2" BEL "ball_dirX" BEL "ball_dirY" BEL
+        "vga_G" BEL "vga_R" BEL "syncgen/CounterY_8" BEL "syncgen/CounterY_7"
+        BEL "syncgen/CounterY_6" BEL "syncgen/CounterY_5" BEL
+        "syncgen/CounterY_4" BEL "syncgen/CounterY_3" BEL "syncgen/CounterY_2"
+        BEL "syncgen/CounterY_1" BEL "syncgen/CounterY_0" BEL
+        "syncgen/CounterX_10" BEL "syncgen/CounterX_9" BEL
+        "syncgen/CounterX_8" BEL "syncgen/CounterX_7" BEL "syncgen/CounterX_6"
+        BEL "syncgen/CounterX_5" BEL "syncgen/CounterX_4" BEL
+        "syncgen/CounterX_3" BEL "syncgen/CounterX_2" BEL "syncgen/CounterX_1"
+        BEL "syncgen/CounterX_0" BEL "syncgen/vga_VS" BEL "syncgen/vga_HS" BEL
+        "syncgen/inDisplayArea" BEL "clk_BUFGP/BUFG" BEL "quadBr_1" BEL
+        "Mshreg_quadBr_1" BEL "quadAr_1" BEL "Mshreg_quadAr_1";
+TS_clk = PERIOD TIMEGRP "clk" 25 MHz HIGH 50%;
+SCHEMATIC END;
+

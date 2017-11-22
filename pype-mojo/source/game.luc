@@ -11,7 +11,7 @@ module game (
     
     // Tile rotation inputs
     input rotate_left,
-    input rotate_right,
+    input rotate_right
     
     // Output
     output vga_R,
@@ -127,11 +127,11 @@ module game (
         // enter name if high score
         // execute teh bing dispenser
         
-        // if reset, goto TITLE
+        //if reset, goto TITLE
         if (reset) {
           screen.d = screen.TITLE;
         }
-  }
     
+     }
   }
 }
