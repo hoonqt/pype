@@ -22,7 +22,7 @@ if(CounterXmaxed) CounterY <= CounterY + 1;
 reg	vga_HS, vga_VS;
 always @(posedge clk)
 begin
-	vga_HS <= (CounterX[10:5]==6'h02d); // change this value to move the display horizontally
+	vga_HS <= (CounterX[10:5]==6'h2d); // change this value to move the display horizontally
 	vga_VS <= (CounterY==500); // change this value to move the display vertically
 end
 
