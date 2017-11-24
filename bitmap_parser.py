@@ -21,7 +21,7 @@ for row in range(1,height+1):
 	color_left_bound = 0
 	color_next_bound = 0
 	current_color = (0, 0, 0)
-	lucid_lines = "wire line" + str(row) + " = ("
+	verilog_lines = "wire line" + str(row) + " = ("
 	line = str(row) + " "
 
 	for index, pixel_color in enumerate(pixels[row-1]):
@@ -51,9 +51,9 @@ for row in range(1,height+1):
 
 			# if the color changes, write the previous block of color.
 			if index != 0 and current_color != (0, 0, 0):
-				lucid_lines += "((CounterX >= " + str((offset_x + color_left_bound))
-				lucid_lines += ") & (CounterX <= " + str(offset_x + index-1)
-				lucid_lines += ")) |"
+				verilog_lines += "((CounterX >= " + str((offset_x + color_left_bound))
+				verilog_lines += ") & (CounterX <= " + str(offset_x + index-1)
+				verilog_lines += ")) |"
 
 			# update the left bound
 			color_left_bound = index
@@ -64,19 +64,19 @@ for row in range(1,height+1):
 
 		if index == width-1:
 
-			lucid_lines = lucid_lines[:-1]
+			verilog_lines = verilog_lines[:-1]
 			
 			if current_color != (0, 0, 0):
-				lucid_lines += "| ((CounterX >= " + str((offset_x + color_left_bound))
-				lucid_lines += ") & (CounterX <= " + str(offset_x + index)
-				lucid_lines += "))"
+				verilog_lines += "| ((CounterX >= " + str((offset_x + color_left_bound))
+				verilog_lines += ") & (CounterX <= " + str(offset_x + index)
+				verilog_lines += "))"
 
-			lucid_lines += ") & ((CounterY == " + str(offset_y + row) + "));"
-
-
+			verilog_lines += ") & ((CounterY == " + str(offset_y + row) + "));"
 
 
-	print lucid_lines
+
+
+	print verilog_lines
 
 color_display += "wire R = "
 
