@@ -1,3 +1,7 @@
+# pype, (c) 2017
+# bitmap to verilog parser, version 2
+# works for monochrome images as of 25/11/17
+
 from PIL import Image
 import numpy as np
 
@@ -14,7 +18,6 @@ list_G = []
 list_B = []
 
 color_display = ""
-
 
 for row in range(1,height+1):
 
@@ -72,9 +75,6 @@ for row in range(1,height+1):
 				verilog_lines += "))"
 
 			verilog_lines += ") & ((CounterY == " + str(offset_y + row) + "));"
-
-
-
 
 	print verilog_lines
 
