@@ -23,8 +23,8 @@ WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/py
 WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 20: Result of 10-bit expression is truncated to fit in 9-bit target.
 WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 28: Result of 10-bit expression is truncated to fit in 9-bit target.
 WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 33: Result of 32-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 73: Result of 32-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 79: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 174: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 180: Result of 32-bit expression is truncated to fit in 9-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -32,46 +32,168 @@ WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/py
 
 Synthesizing Unit <mojo_top_0>.
     Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v".
-    Register <vga_B> equivalent to <vga_G> has been removed
-    Found 3-bit register for signal <quadBr>.
-    Found 9-bit register for signal <PaddlePosition>.
-    Found 1-bit register for signal <ball_inX>.
-    Found 1-bit register for signal <ball_inY>.
-    Found 1-bit register for signal <ResetCollision>.
-    Found 1-bit register for signal <CollisionX1>.
-    Found 1-bit register for signal <CollisionX2>.
-    Found 1-bit register for signal <CollisionY1>.
-    Found 1-bit register for signal <CollisionY2>.
-    Found 11-bit register for signal <ballX>.
-    Found 1-bit register for signal <ball_dirX>.
-    Found 9-bit register for signal <ballY>.
-    Found 1-bit register for signal <ball_dirY>.
+WARNING:Xst:647 - Input <quadA> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <quadB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Register <vga_B> equivalent to <vga_R> has been removed
+    Register <vga_G> equivalent to <vga_R> has been removed
     Found 1-bit register for signal <vga_R>.
-    Found 1-bit register for signal <vga_G>.
-    Found 3-bit register for signal <quadAr>.
-    Found 9-bit adder for signal <PaddlePosition[8]_GND_1_o_add_6_OUT> created at line 28.
-    Found 12-bit adder for signal <_n0217> created at line 43.
-    Found 10-bit adder for signal <_n0213> created at line 46.
-    Found 10-bit adder for signal <n0167[9:0]> created at line 52.
-    Found 10-bit adder for signal <n0169[9:0]> created at line 52.
-    Found 10-bit adder for signal <_n0224> created at line 59.
-    Found 12-bit adder for signal <_n0220> created at line 61.
-    Found 32-bit adder for signal <n0129> created at line 73.
-    Found 32-bit adder for signal <n0132> created at line 79.
-    Found 9-bit subtractor for signal <GND_1_o_GND_1_o_sub_10_OUT<8:0>> created at line 33.
-    Found 11-bit comparator equal for signal <CounterX[10]_ballX[10]_equal_17_o> created at line 43
-    Found 9-bit comparator equal for signal <CounterY[8]_ballY[8]_equal_22_o> created at line 46
-    Found 11-bit comparator lessequal for signal <n0040> created at line 52
-    Found 11-bit comparator lessequal for signal <n0043> created at line 52
-    Found 10-bit comparator equal for signal <GND_1_o_GND_1_o_equal_24_o> created at line 46
-    Found 12-bit comparator equal for signal <GND_1_o_GND_1_o_equal_19_o> created at line 43
-    Found 12-bit comparator equal for signal <GND_1_o_GND_1_o_equal_48_o> created at line 61
-    Found 10-bit comparator equal for signal <GND_1_o_GND_1_o_equal_40_o> created at line 59
+    Found 11-bit comparator lessequal for signal <n0000> created at line 55
+    Found 11-bit comparator lessequal for signal <n0002> created at line 55
+    Found 11-bit comparator lessequal for signal <n0007> created at line 56
+    Found 11-bit comparator lessequal for signal <n0009> created at line 56
+    Found 11-bit comparator lessequal for signal <n0012> created at line 56
+    Found 11-bit comparator lessequal for signal <n0014> created at line 56
+    Found 11-bit comparator lessequal for signal <n0020> created at line 57
+    Found 11-bit comparator lessequal for signal <n0022> created at line 57
+    Found 11-bit comparator lessequal for signal <n0025> created at line 57
+    Found 11-bit comparator lessequal for signal <n0027> created at line 57
+    Found 11-bit comparator lessequal for signal <n0033> created at line 58
+    Found 11-bit comparator lessequal for signal <n0035> created at line 58
+    Found 11-bit comparator lessequal for signal <n0038> created at line 58
+    Found 11-bit comparator lessequal for signal <n0040> created at line 58
+    Found 11-bit comparator lessequal for signal <n0046> created at line 59
+    Found 11-bit comparator lessequal for signal <n0048> created at line 59
+    Found 11-bit comparator lessequal for signal <n0051> created at line 59
+    Found 11-bit comparator lessequal for signal <n0053> created at line 59
+    Found 11-bit comparator lessequal for signal <n0059> created at line 60
+    Found 11-bit comparator lessequal for signal <n0061> created at line 60
+    Found 11-bit comparator lessequal for signal <n0064> created at line 60
+    Found 11-bit comparator lessequal for signal <n0066> created at line 60
+    Found 11-bit comparator lessequal for signal <n0072> created at line 61
+    Found 11-bit comparator lessequal for signal <n0074> created at line 61
+    Found 11-bit comparator lessequal for signal <n0077> created at line 61
+    Found 11-bit comparator lessequal for signal <n0079> created at line 61
+    Found 11-bit comparator lessequal for signal <n0085> created at line 62
+    Found 11-bit comparator lessequal for signal <n0087> created at line 62
+    Found 11-bit comparator lessequal for signal <n0090> created at line 62
+    Found 11-bit comparator lessequal for signal <n0092> created at line 62
+    Found 11-bit comparator lessequal for signal <n0098> created at line 63
+    Found 11-bit comparator lessequal for signal <n0100> created at line 63
+    Found 11-bit comparator lessequal for signal <n0103> created at line 63
+    Found 11-bit comparator lessequal for signal <n0105> created at line 63
+    Found 11-bit comparator lessequal for signal <n0111> created at line 64
+    Found 11-bit comparator lessequal for signal <n0113> created at line 64
+    Found 11-bit comparator lessequal for signal <n0117> created at line 64
+    Found 11-bit comparator lessequal for signal <n0119> created at line 64
+    Found 11-bit comparator lessequal for signal <n0125> created at line 65
+    Found 11-bit comparator lessequal for signal <n0127> created at line 65
+    Found 11-bit comparator lessequal for signal <n0130> created at line 65
+    Found 11-bit comparator lessequal for signal <n0134> created at line 65
+    Found 11-bit comparator lessequal for signal <n0136> created at line 65
+    Found 11-bit comparator lessequal for signal <n0142> created at line 66
+    Found 11-bit comparator lessequal for signal <n0144> created at line 66
+    Found 11-bit comparator lessequal for signal <n0149> created at line 66
+    Found 11-bit comparator lessequal for signal <n0151> created at line 66
+    Found 11-bit comparator lessequal for signal <n0157> created at line 67
+    Found 11-bit comparator lessequal for signal <n0159> created at line 67
+    Found 11-bit comparator lessequal for signal <n0162> created at line 67
+    Found 11-bit comparator lessequal for signal <n0166> created at line 67
+    Found 11-bit comparator lessequal for signal <n0168> created at line 67
+    Found 11-bit comparator lessequal for signal <n0174> created at line 68
+    Found 11-bit comparator lessequal for signal <n0176> created at line 68
+    Found 11-bit comparator lessequal for signal <n0179> created at line 68
+    Found 11-bit comparator lessequal for signal <n0183> created at line 68
+    Found 11-bit comparator lessequal for signal <n0185> created at line 68
+    Found 11-bit comparator lessequal for signal <n0191> created at line 69
+    Found 11-bit comparator lessequal for signal <n0193> created at line 69
+    Found 11-bit comparator lessequal for signal <n0197> created at line 69
+    Found 11-bit comparator lessequal for signal <n0199> created at line 69
+    Found 11-bit comparator lessequal for signal <n0205> created at line 70
+    Found 11-bit comparator lessequal for signal <n0207> created at line 70
+    Found 11-bit comparator lessequal for signal <n0210> created at line 70
+    Found 11-bit comparator lessequal for signal <n0214> created at line 70
+    Found 11-bit comparator lessequal for signal <n0216> created at line 70
+    Found 11-bit comparator lessequal for signal <n0222> created at line 71
+    Found 11-bit comparator lessequal for signal <n0224> created at line 71
+    Found 11-bit comparator lessequal for signal <n0228> created at line 71
+    Found 11-bit comparator lessequal for signal <n0230> created at line 71
+    Found 11-bit comparator lessequal for signal <n0236> created at line 72
+    Found 11-bit comparator lessequal for signal <n0238> created at line 72
+    Found 11-bit comparator lessequal for signal <n0242> created at line 72
+    Found 11-bit comparator lessequal for signal <n0244> created at line 72
+    Found 11-bit comparator lessequal for signal <n0250> created at line 73
+    Found 11-bit comparator lessequal for signal <n0252> created at line 73
+    Found 11-bit comparator lessequal for signal <n0255> created at line 73
+    Found 11-bit comparator lessequal for signal <n0259> created at line 73
+    Found 11-bit comparator lessequal for signal <n0261> created at line 73
+    Found 11-bit comparator lessequal for signal <n0267> created at line 74
+    Found 11-bit comparator lessequal for signal <n0272> created at line 74
+    Found 11-bit comparator lessequal for signal <n0274> created at line 74
+    Found 11-bit comparator lessequal for signal <n0280> created at line 75
+    Found 11-bit comparator lessequal for signal <n0282> created at line 75
+    Found 11-bit comparator lessequal for signal <n0287> created at line 75
+    Found 11-bit comparator lessequal for signal <n0289> created at line 75
+    Found 11-bit comparator lessequal for signal <n0295> created at line 76
+    Found 11-bit comparator lessequal for signal <n0297> created at line 76
+    Found 11-bit comparator lessequal for signal <n0300> created at line 76
+    Found 11-bit comparator lessequal for signal <n0304> created at line 76
+    Found 11-bit comparator lessequal for signal <n0308> created at line 76
+    Found 11-bit comparator lessequal for signal <n0310> created at line 76
+    Found 11-bit comparator lessequal for signal <n0316> created at line 77
+    Found 11-bit comparator lessequal for signal <n0318> created at line 77
+    Found 11-bit comparator lessequal for signal <n0323> created at line 77
+    Found 11-bit comparator lessequal for signal <n0327> created at line 77
+    Found 11-bit comparator lessequal for signal <n0329> created at line 77
+    Found 11-bit comparator lessequal for signal <n0335> created at line 78
+    Found 11-bit comparator lessequal for signal <n0337> created at line 78
+    Found 11-bit comparator lessequal for signal <n0341> created at line 78
+    Found 11-bit comparator lessequal for signal <n0345> created at line 78
+    Found 11-bit comparator lessequal for signal <n0347> created at line 78
+    Found 11-bit comparator lessequal for signal <n0353> created at line 79
+    Found 11-bit comparator lessequal for signal <n0355> created at line 79
+    Found 11-bit comparator lessequal for signal <n0359> created at line 79
+    Found 11-bit comparator lessequal for signal <n0363> created at line 79
+    Found 11-bit comparator lessequal for signal <n0365> created at line 79
+    Found 11-bit comparator lessequal for signal <n0371> created at line 80
+    Found 11-bit comparator lessequal for signal <n0373> created at line 80
+    Found 11-bit comparator lessequal for signal <n0376> created at line 80
+    Found 11-bit comparator lessequal for signal <n0378> created at line 80
+    Found 11-bit comparator lessequal for signal <n0383> created at line 80
+    Found 11-bit comparator lessequal for signal <n0385> created at line 80
+    Found 11-bit comparator lessequal for signal <n0393> created at line 81
+    Found 11-bit comparator lessequal for signal <n0400> created at line 82
+    Found 11-bit comparator lessequal for signal <n0404> created at line 82
+    Found 11-bit comparator lessequal for signal <n0411> created at line 83
+    Found 11-bit comparator lessequal for signal <n0422> created at line 84
+    Found 11-bit comparator lessequal for signal <n0429> created at line 85
+    Found 11-bit comparator lessequal for signal <n0439> created at line 86
+    Found 11-bit comparator lessequal for signal <n0452> created at line 88
+    Found 11-bit comparator lessequal for signal <n0456> created at line 88
+    Found 11-bit comparator lessequal for signal <n0464> created at line 89
+    Found 11-bit comparator lessequal for signal <n0471> created at line 90
+    Found 11-bit comparator lessequal for signal <n0480> created at line 91
+    Found 11-bit comparator lessequal for signal <n0487> created at line 92
+    Found 11-bit comparator lessequal for signal <n0497> created at line 93
+    Found 11-bit comparator lessequal for signal <n0509> created at line 95
+    Found 11-bit comparator lessequal for signal <n0513> created at line 95
+    Found 11-bit comparator lessequal for signal <n0520> created at line 96
+    Found 11-bit comparator lessequal for signal <n0534> created at line 98
+    Found 11-bit comparator lessequal for signal <n0541> created at line 99
+    Found 11-bit comparator lessequal for signal <n0555> created at line 101
+    Found 11-bit comparator lessequal for signal <n0563> created at line 102
+    Found 11-bit comparator lessequal for signal <n0567> created at line 102
+    Found 11-bit comparator lessequal for signal <n0579> created at line 104
+    Found 11-bit comparator lessequal for signal <n0581> created at line 104
+    Found 11-bit comparator lessequal for signal <n0589> created at line 105
+    Found 11-bit comparator lessequal for signal <n0593> created at line 105
+    Found 11-bit comparator lessequal for signal <n0600> created at line 106
+    Found 11-bit comparator lessequal for signal <n0613> created at line 108
+    Found 11-bit comparator lessequal for signal <n0615> created at line 108
+    Found 11-bit comparator lessequal for signal <n0628> created at line 110
+    Found 11-bit comparator lessequal for signal <n0641> created at line 112
+    Found 11-bit comparator lessequal for signal <n0661> created at line 115
+    Found 11-bit comparator lessequal for signal <n0674> created at line 117
+    Found 11-bit comparator lessequal for signal <n0699> created at line 121
+    Found 11-bit comparator lessequal for signal <n0720> created at line 124
+    Found 11-bit comparator lessequal for signal <n0733> created at line 126
+    Found 11-bit comparator lessequal for signal <n0740> created at line 127
+    Found 11-bit comparator lessequal for signal <n0757> created at line 130
+    Found 11-bit comparator lessequal for signal <n0765> created at line 131
+    Found 11-bit comparator lessequal for signal <n0784> created at line 134
+    Found 11-bit comparator lessequal for signal <n0791> created at line 135
     Summary:
-	inferred   9 Adder/Subtractor(s).
-	inferred  46 D-type flip-flop(s).
-	inferred   8 Comparator(s).
-	inferred   2 Multiplexer(s).
+	inferred   1 D-type flip-flop(s).
+	inferred 154 Comparator(s).
 Unit <mojo_top_0> synthesized.
 
 Synthesizing Unit <hvsync_generator_1>.
@@ -95,30 +217,18 @@ Unit <hvsync_generator_1> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 11
- 10-bit adder                                          : 4
+# Adders/Subtractors                                   : 2
  11-bit adder                                          : 1
- 12-bit adder                                          : 2
- 32-bit adder                                          : 2
  9-bit adder                                           : 1
- 9-bit addsub                                          : 1
-# Registers                                            : 21
- 1-bit register                                        : 14
- 11-bit register                                       : 2
- 3-bit register                                        : 2
- 9-bit register                                        : 3
-# Comparators                                          : 9
- 10-bit comparator equal                               : 2
- 11-bit comparator equal                               : 1
- 11-bit comparator lessequal                           : 2
- 12-bit comparator equal                               : 2
- 9-bit comparator equal                                : 1
+# Registers                                            : 6
+ 1-bit register                                        : 4
+ 11-bit register                                       : 1
+ 9-bit register                                        : 1
+# Comparators                                          : 155
+ 11-bit comparator lessequal                           : 154
  9-bit comparator greater                              : 1
-# Multiplexers                                         : 3
- 1-bit 2-to-1 multiplexer                              : 3
-# Xors                                                 : 3
- 1-bit xor2                                            : 2
- 1-bit xor4                                            : 1
+# Multiplexers                                         : 1
+ 1-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -132,38 +242,18 @@ The following registers are absorbed into counter <CounterX>: 1 register on sign
 The following registers are absorbed into counter <CounterY>: 1 register on signal <CounterY>.
 Unit <hvsync_generator_1> synthesized (advanced).
 
-Synthesizing (advanced) Unit <mojo_top_0>.
-The following registers are absorbed into counter <PaddlePosition>: 1 register on signal <PaddlePosition>.
-The following registers are absorbed into accumulator <ballX>: 1 register on signal <ballX>.
-The following registers are absorbed into accumulator <ballY>: 1 register on signal <ballY>.
-Unit <mojo_top_0> synthesized (advanced).
-
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 6
- 10-bit adder                                          : 4
- 12-bit adder                                          : 2
-# Counters                                             : 3
+# Counters                                             : 2
  11-bit up counter                                     : 1
  9-bit up counter                                      : 1
- 9-bit updown counter                                  : 1
-# Accumulators                                         : 2
- 11-bit up accumulator                                 : 1
- 9-bit up accumulator                                  : 1
-# Registers                                            : 20
- Flip-Flops                                            : 20
-# Comparators                                          : 9
- 10-bit comparator equal                               : 2
- 11-bit comparator equal                               : 1
- 11-bit comparator lessequal                           : 2
- 12-bit comparator equal                               : 2
- 9-bit comparator equal                                : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Comparators                                          : 155
+ 11-bit comparator lessequal                           : 154
  9-bit comparator greater                              : 1
-# Xors                                                 : 3
- 1-bit xor2                                            : 2
- 1-bit xor4                                            : 1
 
 =========================================================================
 
@@ -177,23 +267,35 @@ Optimizing unit <hvsync_generator_1> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 3.
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 10.
+FlipFlop syncgen/CounterX_0 has been replicated 4 time(s)
+FlipFlop syncgen/CounterX_1 has been replicated 4 time(s)
+FlipFlop syncgen/CounterX_10 has been replicated 3 time(s)
+FlipFlop syncgen/CounterX_2 has been replicated 4 time(s)
+FlipFlop syncgen/CounterX_3 has been replicated 5 time(s)
+FlipFlop syncgen/CounterX_4 has been replicated 6 time(s)
+FlipFlop syncgen/CounterX_5 has been replicated 7 time(s)
+FlipFlop syncgen/CounterX_6 has been replicated 7 time(s)
+FlipFlop syncgen/CounterX_7 has been replicated 3 time(s)
+FlipFlop syncgen/CounterX_8 has been replicated 5 time(s)
+FlipFlop syncgen/CounterX_9 has been replicated 3 time(s)
+FlipFlop syncgen/CounterY_1 has been replicated 1 time(s)
+FlipFlop syncgen/CounterY_2 has been replicated 1 time(s)
+FlipFlop syncgen/CounterY_3 has been replicated 1 time(s)
+FlipFlop syncgen/CounterY_4 has been replicated 1 time(s)
+FlipFlop syncgen/CounterY_5 has been replicated 1 time(s)
+FlipFlop syncgen/CounterY_6 has been replicated 1 time(s)
+FlipFlop syncgen/CounterY_7 has been replicated 1 time(s)
+FlipFlop syncgen/CounterY_8 has been replicated 1 time(s)
 
 Final Macro Processing ...
-
-Processing Unit <mojo_top_0> :
-	Found 2-bit shift register for signal <quadBr_1>.
-	Found 2-bit shift register for signal <quadAr_1>.
-Unit <mojo_top_0> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 65
- Flip-Flops                                            : 65
-# Shift Registers                                      : 2
- 2-bit shift register                                  : 2
+# Registers                                            : 83
+ Flip-Flops                                            : 83
 
 =========================================================================
 
@@ -217,7 +319,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 69    |
+clk                                | BUFGP                  | 83    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -228,8 +330,8 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 6.517ns (Maximum Frequency: 153.445MHz)
-   Minimum input arrival time before clock: 2.009ns
+   Minimum period: 9.343ns (Maximum Frequency: 107.032MHz)
+   Minimum input arrival time before clock: No path found
    Maximum output required time after clock: 5.054ns
    Maximum combinational path delay: No path found
 
