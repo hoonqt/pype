@@ -1,5 +1,5 @@
 # pype, (c) 2017
-# Python 2 bitmap-to-verilog parser, version 2
+# Python 3 bitmap-to-verilog parser, version 2
 # works for monochrome images as of 25/11/17
 
 from PIL import Image
@@ -76,7 +76,7 @@ for row in range(1,height+1):
 
 			verilog_lines += ") & ((CounterY == " + str(offset_y + row) + "));"
 
-	print verilog_lines
+	print(verilog_lines)
 
 color_display += "wire R = "
 
@@ -102,4 +102,4 @@ for i in range(0, len(list_B)):
 	else:
 		color_display += "line" + str(list_B[i]) + ";\n"
 
-print color_display
+print(color_display)
