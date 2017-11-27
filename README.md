@@ -7,3 +7,6 @@ In a faraway and mythical foreign land, a critical part of the subway has been d
 A 5x5 grid made up of hexagonal tiles is given to the player, each tile containing a scrambled segment of the pipe. Each tile may have 8 different shapes. The player has to rotate the segments of the pipe systematically until they are all connected, draining the tunnel.
 
 Achieving players might even be rewarded with something special.
+
+# How to play
+![]( https://github.com/joel-huang/pype/blob/master/pype-poster-01.png?raw=true "pype")
