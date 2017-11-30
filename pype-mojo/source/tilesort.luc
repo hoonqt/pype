@@ -1,37 +1,50 @@
 module tilesort (
     input clk,  // clock
-    output yellow
+    output tile1,
+    output tile2,
+    output tile3,
+    output tile4,
+    output tile5,
+    output tile6
   )
   {
   
   .clk(clk) {
   
-    hvsync_generator hvsync;
+    tiledraw tilea;
+    tiledraw tileb;
+    tiledraw tilec;
+    tiledraw tiled;
+    tiledraw tilee;
+    tiledraw tilef;
   }
   
-  sig counterh[11];
-  sig counterv[9];
 
   always {
-    counterh = hvsync.CounterX;
-    counterv = hvsync.CounterY;
+  
+    tilea.horizontaloffset = 0;
+    tilea.verticaloffset = 0;
+    tile1 = tilea.yellow;
     
-    //Block for tile1
-    if (((counterh >= 376-(counterv-64)*4)&(counterh <= (counterv-64)*4+378))&((counterv>=70&counterv<=85))) {
-    yellow = 1;
-     }    
-      
-    else if (((counterh>=300)&(counterh<=454))&(counterv>=86)&(counterv<=116)) {
-    yellow = 1;
-    }
+    tileb.horizontaloffset = 270;
+    tileb.verticaloffset = 0;
+    tile2 = tileb.yellow;
     
-    else if (((counterh >= 376 - (156-counterv)*4)&(counterh <= (156-counterv)*4+378))&((counterv>=117&counterv<=131))) {
-    yellow = 1;
-    }
-      
+    tilec.horizontaloffset = 390;
+    tilec.verticaloffset = 0;
+    tile3 = tilec.yellow;
     
-    else {
-    yellow = 0;
-    }
+    tiled.horizontaloffset = 510;
+    tiled.verticaloffset = 0;
+    tile4 = tiled.yellow;
+    
+    tilee.horizontaloffset = 630;
+    tilee.verticaloffset = 0;
+    tile5 = tilee.yellow;
+    
+    tilef.horizontaloffset = 200;
+    tilef.verticaloffset = 52;
+    tile6 = tilef.yellow;
+    
   }
 }
