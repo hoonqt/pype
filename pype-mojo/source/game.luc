@@ -1,5 +1,10 @@
+// pype, (c) 2017
+
 module game (
     input clk,
+    
+    // reset button
+    input reset,
     
     // Selector direction inputs
     input left,
@@ -9,63 +14,132 @@ module game (
     
     // Tile rotation inputs
     input rotate_left,
-    input rotate_right,
+    input rotate_right
     
     // Output
-    output vga_R,
-    output vga_G,
-    output vga_B,
-    output vga_v_sync,
-    output vga_v_hsync
+    //output vga_R,
+    //output vga_G,
+    //output vga_B,
+    //output vga_v_sync,
+    //output vga_v_hsync
   ) {
 
   .clk(clk) {
   
-    // All the tiles that exist to be selected.
-    fsm select_tile = {S00, S01, S10, S11};
+    // TODO: Instantiate an 8-bit ALU
+    // 'screen' is the main state machine of the entire game.
+    // it switches between the various screens in pype.
+    fsm screen = {TITLE, LOAD_GAME, GAME_WAIT, GAME_CHECK_SOLUTION, WIN_LEVEL, WIN_GAME, GAME_OVER};
+    
   }
   
+  // Each of 25 tiles has 1 rotation coordinate, usable values from 0-5.
+  sig rotation[25];
+  
+  sig selectedTile;
+  
+  sig numberOfWins;
+  solutions solution;
+  const MAX_WINS = 5;
     
   always {
   
-    level1.tile1x = 0;
-    level1.tile1y = 0;
-    level1.tile1orientation = 0;
-  
-    case(select_tile.q) {
-      
-      select_tile.S00:
-        
-        if (rotate_left)
-          // level1.tile1orientation = level1.tile1neworientation - 1;
-          alu.alufn = 000001; // set alu to adder subtraction
-          alu.a = level1.tile1neworientation;
-          alu.b = 1;
-          level1.tile1orientation = alu.out;
-        
-        if (rotate_right)
-          // level1.tile1orientation = level1.tile1neworientation + 1;
-          alu.alufn = 000000; // set alu to adder addition
-          alu.a = level1.tile1neworientation;
-          alu.b = 1;
-          level1.tile1orientation = alu.out;
-              
-        if (left)
-          select_tile.d = select_tile.S10;
-        
-        if (right)
-          select_tile.d = select_tile.S10;
-          
-        if (up)
-          select_tile.d = select_tile.S10;
-          
-        if (down)
-          select_tile.d = select_tile.S10;       
-          
-        
-        
-      
-    }
+    // set values of global variables
+    selectedTile = 0;
+    numberOfWins = 0;
+    solution.puzzle_number = 0;
+    rotation = 0; // TODO: write randomizer to randomize rotations. For now, set all to 0 (northeast)
     
+    // set boundaries for tile addressing.
+    if (rotation[selectedTile] > 5) rotation[selectedTile] = 0;
+    if (rotation[selectedTile] < 0) rotation[selectedTile] = 5;
+    if (selectedTile > 24) selectedTile = 0;
+    if (selectedTile < 0) selectedTile = 24;
+    
+    case(screen.q) {
+    
+      screen.TITLE:
+        
+        // render title screen here
+        
+        // if proceed, go to LOAD_GAME
+        screen.d = screen.LOAD_GAME;
+        
+      screen.LOAD_GAME:
+        
+        // render game ui and puzzle here
+        
+        // choose the puzzle
+        solution.puzzle_number = 1;
+        
+        // check done, then go to GAME_WAIT
+        screen.d = screen.GAME_WAIT;
+        
+      screen.GAME_WAIT:
+        
+        // listen for up, down, left and right
+        // potential problems: both buttons pressed at same time?
+        case (up || down || left || right) {
+
+          up:
+            selectedTile = selectedTile - 5;
+          
+          down:
+            selectedTile = selectedTile + 5;
+            
+          left:
+            selectedTile = selectedTile - 1;
+            
+          right:
+            selectedTile = selectedTile + 1;
+            
+          // TODO: render the box at the updated selectedTile location.
+                     
+        }
+        
+        case(rotate_left || rotate_right) {
+        
+          rotate_left:
+            rotation[selectedTile] = rotation[selectedTile] - 1;
+            
+          rotate_right:
+            rotation[selectedTile] = rotation[selectedTile] + 1;
+            
+          // render new tile image as a function of rotation[]
+            
+        }
+        
+        // listen for reset, goto TITLE
+        if (reset) {
+          screen.d = screen.TITLE;
+        }
+        
+      screen.GAME_CHECK_SOLUTION:
+      
+        // check if current 2D array of solutions matches a solution
+        if (rotation == solution.correct_solution) {
+          screen.d = screen.WIN_LEVEL;
+        }
+        
+      screen.WIN_LEVEL:
+        
+        // check if wins = MAX_WINS, if true goto WIN_GAME
+        if (numberOfWins == MAX_WINS) {
+          screen.d = screen.WIN_GAME;
+          
+        }
+        
+      screen.WIN_GAME:
+        
+        // calc score
+        // enter name if high score
+        // execute teh bing dispenser
+        
+        // if reset, goto TITLE
+        if (reset) {
+          screen.d = screen.TITLE;
+        }
+    
+     }
   }
 }

@@ -1,0 +1,54 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Nov 25 00:14:07 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "vga_h_sync" LOCATE = SITE "P15" LEVEL 1;
+COMP "vga_v_sync" LOCATE = SITE "P12" LEVEL 1;
+COMP "vga_B" LOCATE = SITE "P17" LEVEL 1;
+COMP "vga_G" LOCATE = SITE "P22" LEVEL 1;
+COMP "vga_R" LOCATE = SITE "P24" LEVEL 1;
+TIMEGRP clk = BEL "syncgen/CounterY_8" BEL "syncgen/CounterY_7" BEL
+        "syncgen/CounterY_6" BEL "syncgen/CounterY_5" BEL "syncgen/CounterY_4"
+        BEL "syncgen/CounterY_3" BEL "syncgen/CounterY_2" BEL
+        "syncgen/CounterY_1" BEL "syncgen/CounterY_0" BEL
+        "syncgen/CounterX_10" BEL "syncgen/CounterX_9" BEL
+        "syncgen/CounterX_8" BEL "syncgen/CounterX_7" BEL "syncgen/CounterX_6"
+        BEL "syncgen/CounterX_5" BEL "syncgen/CounterX_4" BEL
+        "syncgen/CounterX_3" BEL "syncgen/CounterX_2" BEL "syncgen/CounterX_1"
+        BEL "syncgen/CounterX_0" BEL "syncgen/vga_VS" BEL "syncgen/vga_HS" BEL
+        "syncgen/inDisplayArea" BEL "syncgen/CounterX_8_1" BEL
+        "syncgen/CounterX_4_1" BEL "syncgen/CounterX_5_1" BEL
+        "syncgen/CounterX_6_1" BEL "syncgen/CounterX_3_1" BEL
+        "syncgen/CounterX_2_1" BEL "syncgen/CounterX_1_1" BEL
+        "syncgen/CounterX_0_1" BEL "syncgen/CounterX_5_2" BEL
+        "syncgen/CounterX_6_2" BEL "syncgen/CounterX_4_2" BEL
+        "syncgen/CounterX_7_1" BEL "syncgen/CounterX_9_1" BEL
+        "syncgen/CounterX_3_2" BEL "syncgen/CounterX_0_2" BEL
+        "syncgen/CounterX_10_1" BEL "syncgen/CounterX_2_2" BEL
+        "syncgen/CounterX_1_2" BEL "syncgen/CounterX_6_3" BEL
+        "syncgen/CounterX_4_3" BEL "syncgen/CounterX_7_2" BEL
+        "syncgen/CounterX_9_2" BEL "syncgen/CounterX_10_2" BEL
+        "syncgen/CounterX_1_3" BEL "syncgen/CounterX_0_3" BEL
+        "syncgen/CounterX_5_3" BEL "syncgen/CounterY_1_1" BEL
+        "syncgen/CounterY_3_1" BEL "syncgen/CounterY_4_1" BEL
+        "syncgen/CounterX_8_2" BEL "syncgen/CounterY_5_1" BEL
+        "syncgen/CounterX_2_3" BEL "syncgen/CounterX_3_3" BEL
+        "syncgen/CounterX_3_4" BEL "syncgen/CounterX_8_3" BEL
+        "syncgen/CounterX_8_4" BEL "syncgen/CounterX_6_4" BEL
+        "syncgen/CounterX_6_5" BEL "syncgen/CounterX_5_4" BEL
+        "syncgen/CounterX_5_5" BEL "syncgen/CounterX_9_3" BEL
+        "syncgen/CounterX_7_3" BEL "syncgen/CounterX_2_4" BEL
+        "syncgen/CounterY_6_1" BEL "syncgen/CounterX_4_4" BEL
+        "syncgen/CounterX_4_5" BEL "syncgen/CounterX_10_3" BEL
+        "syncgen/CounterY_8_1" BEL "syncgen/CounterY_7_1" BEL
+        "syncgen/CounterY_2_1" BEL "syncgen/CounterX_3_5" BEL
+        "syncgen/CounterX_1_4" BEL "syncgen/CounterX_6_6" BEL
+        "syncgen/CounterX_6_7" BEL "syncgen/CounterX_5_6" BEL
+        "syncgen/CounterX_5_7" BEL "syncgen/CounterX_8_5" BEL
+        "syncgen/CounterX_0_4" BEL "syncgen/CounterX_4_6" BEL "vga_R" BEL
+        "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 25 MHz HIGH 50%;
+SCHEMATIC END;
+

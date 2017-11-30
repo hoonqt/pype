@@ -1,11 +1,17 @@
 module tilesort (
     input clk,  // clock
     input rst  // reset
+    output tile1,
+    output tile2,
+    output tile3,
+    output tile4,
+    output tile5,
+    output tile6
+
   )
   {
   
   .clk(clk) {
-  
     hvsync_generator hvsync;
     tile1 tile1;
     tile2 tile2;
@@ -794,5 +800,40 @@ module tilesort (
     tile3.pixelx = 0;
     tile3.pixely = 0;
     }
+    
+    tiledraw tilea;
+    tiledraw tileb;
+    tiledraw tilec;
+    tiledraw tiled;
+    tiledraw tilee;
+    tiledraw tilef;
+  }
+  
+
+  always {
+  
+    tilea.horizontaloffset = 0;
+    tilea.verticaloffset = 0;
+    tile1 = tilea.yellow;
+    
+    tileb.horizontaloffset = 270;
+    tileb.verticaloffset = 0;
+    tile2 = tileb.yellow;
+    
+    tilec.horizontaloffset = 390;
+    tilec.verticaloffset = 0;
+    tile3 = tilec.yellow;
+    
+    tiled.horizontaloffset = 510;
+    tiled.verticaloffset = 0;
+    tile4 = tiled.yellow;
+    
+    tilee.horizontaloffset = 630;
+    tilee.verticaloffset = 0;
+    tile5 = tilee.yellow;
+    
+    tilef.horizontaloffset = 200;
+    tilef.verticaloffset = 52;
+    tile6 = tilef.yellow;
   }
 }

@@ -1,0 +1,102 @@
+module borders (
+    input clk,  // clock
+    output bordered
+  ) {
+  
+  .clk(clk) {
+  
+    hvsync_generator hvsync;
+  }
+  
+    sig line0,line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,line14,line15,line16,line17,line18,line19,line20,line21,line22,line23,line24,line25,line26,line27,line28,line29,line30,line31,line32,line33,line34,line35,line36,line37,line38,line39,line40,line41,line42,line43,line44,line45,line46,line47,line48,line49,line50,line51,line52,line53,line54,line55,line56,line57,line58,line59,line60,line61,line62,line63,line64,line65;
+
+    sig counterh[11];
+    sig counterv[9];
+    
+    sig horizontaloffset[10];
+    sig verticaloffset[8];
+    
+  always {
+    
+    counterh = hvsync.CounterX;
+    counterv = hvsync.CounterY;
+    
+    horizontaloffset =0;
+    verticaloffset = 0;
+    
+    line0 = (((counterh>=301 +horizontaloffset)&(counterh<=357 +horizontaloffset))&(counterv == 118+verticaloffset));
+    line1 = (((counterh>=299 +horizontaloffset)&(counterh<=359 +horizontaloffset))&(counterv == 119+verticaloffset));
+    line2 = (((counterh>=297 +horizontaloffset)&(counterh<=301 +horizontaloffset))|((counterh>=357+horizontaloffset)&(counterh<=361+horizontaloffset)))&((counterv ==122+verticaloffset));
+    line3 = (((counterh>=296 +horizontaloffset)&(counterh<=299 +horizontaloffset))|((counterh>=359+horizontaloffset)&(counterh<=362+horizontaloffset)))&((counterv ==123+verticaloffset));
+    line4 = (((counterh>=294 +horizontaloffset)&(counterh<=297 +horizontaloffset))|((counterh>=361+horizontaloffset)&(counterh<=364+horizontaloffset)))&((counterv ==124+verticaloffset));
+    line5 = (((counterh>=293 +horizontaloffset)&(counterh<=296 +horizontaloffset))|((counterh>=362+horizontaloffset)&(counterh<=365+horizontaloffset)))&((counterv ==125+verticaloffset));
+    line6 = (((counterh>=291 +horizontaloffset)&(counterh<=294 +horizontaloffset))|((counterh>=364+horizontaloffset)&(counterh<=367+horizontaloffset)))&((counterv ==126+verticaloffset));
+    line7 = (((counterh>=289 +horizontaloffset)&(counterh<=292 +horizontaloffset))|((counterh>=366+horizontaloffset)&(counterh<=369+horizontaloffset)))&((counterv ==127+verticaloffset));
+    line8 = (((counterh>=288 +horizontaloffset)&(counterh<=291 +horizontaloffset))|((counterh>=367+horizontaloffset)&(counterh<=370+horizontaloffset)))&((counterv ==128+verticaloffset));
+    line9 = (((counterh>=286 +horizontaloffset)&(counterh<=289 +horizontaloffset))|((counterh>=369+horizontaloffset)&(counterh<=372+horizontaloffset)))&((counterv ==129+verticaloffset));
+    line10 = (((counterh>=284 +horizontaloffset)&(counterh<=287 +horizontaloffset))|((counterh>=371+horizontaloffset)&(counterh<=374+horizontaloffset)))&((counterv ==130+verticaloffset));
+    line11 = (((counterh>=283 +horizontaloffset)&(counterh<=285 +horizontaloffset))|((counterh>=373+horizontaloffset)&(counterh<=375+horizontaloffset)))&((counterv ==131+verticaloffset));
+    line12 = (((counterh>=281 +horizontaloffset)&(counterh<=284 +horizontaloffset))|((counterh>=374+horizontaloffset)&(counterh<=377+horizontaloffset)))&((counterv ==132+verticaloffset));
+    line13 = (((counterh>=280 +horizontaloffset)&(counterh<=282 +horizontaloffset))|((counterh>=376+horizontaloffset)&(counterh<=378+horizontaloffset)))&((counterv ==133+verticaloffset));
+    line14 = (((counterh>=278 +horizontaloffset)&(counterh<=280 +horizontaloffset))|((counterh>=378+horizontaloffset)&(counterh<=380+horizontaloffset)))&((counterv ==134+verticaloffset));
+    line15 = (((counterh>=276 +horizontaloffset)&(counterh<=279 +horizontaloffset))|((counterh>=379+horizontaloffset)&(counterh<=382+horizontaloffset)))&((counterv ==135+verticaloffset));
+    line16 = (((counterh>=276 +horizontaloffset)&(counterh<=277 +horizontaloffset))|((counterh>=381+horizontaloffset)&(counterh<=382+horizontaloffset)))&((counterv ==136+verticaloffset));
+    line17 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==137+verticaloffset));
+    line18 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==138+verticaloffset));
+    line19 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==139+verticaloffset));
+    line20 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==140+verticaloffset));
+    line21 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==141+verticaloffset));
+    line22 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==142+verticaloffset));
+    line23 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==143+verticaloffset));
+    line24 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==144+verticaloffset));
+    line25 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==145+verticaloffset));
+    line26 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==146+verticaloffset));
+    line27 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==147+verticaloffset));
+    line28 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==148+verticaloffset));
+    line29 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==149+verticaloffset));
+    line30 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==150+verticaloffset));
+    line31 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==151+verticaloffset));
+    line32 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==152+verticaloffset));
+    line33 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==153+verticaloffset));
+    line34 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==154+verticaloffset));
+    line35 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==155+verticaloffset));
+    line36 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==156+verticaloffset));
+    line37 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==157+verticaloffset));
+    line38 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==158+verticaloffset));
+    line39 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==159+verticaloffset));
+    line40 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==160+verticaloffset));
+    line41 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==161+verticaloffset));
+    line42 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==162+verticaloffset));
+    line43 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==163+verticaloffset));
+    line44 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==164+verticaloffset));
+    line45 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==165+verticaloffset));
+    line46 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==166+verticaloffset));
+    line47 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==167+verticaloffset));
+    line48 = (((counterh>=275 +horizontaloffset)&(counterh<=276 +horizontaloffset))|((counterh>=382+horizontaloffset)&(counterh<=383+horizontaloffset)))&((counterv ==168+verticaloffset));
+    line49 = (((counterh>=276 +horizontaloffset)&(counterh<=277 +horizontaloffset))|((counterh>=381+horizontaloffset)&(counterh<=382+horizontaloffset)))&((counterv ==169+verticaloffset));
+    line50 = (((counterh>=276 +horizontaloffset)&(counterh<=279 +horizontaloffset))|((counterh>=379+horizontaloffset)&(counterh<=382+horizontaloffset)))&((counterv ==170+verticaloffset));
+    line51 = (((counterh>=278 +horizontaloffset)&(counterh<=280 +horizontaloffset))|((counterh>=378+horizontaloffset)&(counterh<=380+horizontaloffset)))&((counterv ==171+verticaloffset));
+    line52 = (((counterh>=280 +horizontaloffset)&(counterh<=282 +horizontaloffset))|((counterh>=376+horizontaloffset)&(counterh<=378+horizontaloffset)))&((counterv ==172+verticaloffset));
+    line53 = (((counterh>=281 +horizontaloffset)&(counterh<=284 +horizontaloffset))|((counterh>=374+horizontaloffset)&(counterh<=377+horizontaloffset)))&((counterv ==173+verticaloffset));
+    line54 = (((counterh>=283 +horizontaloffset)&(counterh<=285 +horizontaloffset))|((counterh>=373+horizontaloffset)&(counterh<=375+horizontaloffset)))&((counterv ==174+verticaloffset));
+    line55 = (((counterh>=284 +horizontaloffset)&(counterh<=287 +horizontaloffset))|((counterh>=371+horizontaloffset)&(counterh<=374+horizontaloffset)))&((counterv ==175+verticaloffset));
+    line56 = (((counterh>=286 +horizontaloffset)&(counterh<=289 +horizontaloffset))|((counterh>=369+horizontaloffset)&(counterh<=372+horizontaloffset)))&((counterv ==176+verticaloffset));
+    line57 = (((counterh>=288 +horizontaloffset)&(counterh<=291 +horizontaloffset))|((counterh>=367+horizontaloffset)&(counterh<=370+horizontaloffset)))&((counterv ==177+verticaloffset));
+    line58 = (((counterh>=289 +horizontaloffset)&(counterh<=292 +horizontaloffset))|((counterh>=366+horizontaloffset)&(counterh<=369+horizontaloffset)))&((counterv ==178+verticaloffset));
+    line59 = (((counterh>=291 +horizontaloffset)&(counterh<=294 +horizontaloffset))|((counterh>=364+horizontaloffset)&(counterh<=367+horizontaloffset)))&((counterv ==179+verticaloffset));
+    line60 = (((counterh>=293 +horizontaloffset)&(counterh<=296 +horizontaloffset))|((counterh>=362+horizontaloffset)&(counterh<=365+horizontaloffset)))&((counterv ==180+verticaloffset));
+    line61 = (((counterh>=294 +horizontaloffset)&(counterh<=297 +horizontaloffset))|((counterh>=361+horizontaloffset)&(counterh<=364+horizontaloffset)))&((counterv ==181+verticaloffset));
+    line62 = (((counterh>=296 +horizontaloffset)&(counterh<=299 +horizontaloffset))|((counterh>=359+horizontaloffset)&(counterh<=362+horizontaloffset)))&((counterv ==182+verticaloffset));
+    line63 = (((counterh>=297 +horizontaloffset)&(counterh<=301 +horizontaloffset))|((counterh>=357+horizontaloffset)&(counterh<=361+horizontaloffset)))&((counterv ==183+verticaloffset));
+    line64 = (((counterh>=299 +horizontaloffset)&(counterh<=359 +horizontaloffset))&(counterv == 186+verticaloffset));
+    line65 = (((counterh>=301 +horizontaloffset)&(counterh<=357 +horizontaloffset))&(counterv == 187+verticaloffset));
+    
+
+    
+
+
+
+
+    bordered = line0 | line1 | line2 | line3 | line4 | line5 | line6 | line7 | line8 | line9 | line10 | line11 | line12 | line13 | line14 | line15 | line16 | line17 | line18 | line19 | line20 | line21 | line22 | line23|line24|line25|line26|line27|line28|line29|line30|line31|line32|line33|line34|line35|line36| line37 | line38 | line39 | line40 | line41 | line42 | line43 | line44 | line45 | line46 | line47 | line48 | line49 | line50 | line51 | line52 | line53 | line54 | line55 | line56 | line57 | line58 | line59 | line60 |line61|line62|line63|line64|line65;
+  }
+}
