@@ -7,9 +7,29 @@ Reading design: mojo_top_0.prj
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" into library work
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" into library work
 Parsing module <hvsync_generator_1>.
-Analyzing Verilog file "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bram_15.v" into library work
+Parsing module <bram_15>.
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tiledraw_4.v" into library work
+Parsing module <tiledraw_4>.
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerword4_14.v" into library work
+Parsing module <bannerword4_14>.
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerword3_13.v" into library work
+Parsing module <bannerword3_13>.
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerword2_12.v" into library work
+Parsing module <bannerword2_12>.
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerword1_11.v" into library work
+Parsing module <bannerword1_11>.
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerpart2_10.v" into library work
+Parsing module <bannerpart2_10>.
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerpart1_9.v" into library work
+Parsing module <bannerpart1_9>.
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tilesort_2.v" into library work
+Parsing module <tilesort_2>.
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" into library work
+Parsing module <bannerdraw_3>.
+Analyzing Verilog file "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
 
 =========================================================================
@@ -19,185 +39,70 @@ Parsing module <mojo_top_0>.
 Elaborating module <mojo_top_0>.
 
 Elaborating module <hvsync_generator_1>.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 17: Result of 12-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 20: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 28: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 33: Result of 32-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 174: Result of 32-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 180: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 17: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v" Line 20: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:1127 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 14: Assignment to CounterX ignored, since the identifier is never used
+
+Elaborating module <tilesort_2>.
+
+Elaborating module <tiledraw_4>.
+WARNING:HDLCompiler:1127 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tiledraw_4.v" Line 25: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tiledraw_4.v" Line 26: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tiledraw_4.v" Line 27: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
+
+Elaborating module <bram_15>.
+WARNING:HDLCompiler:413 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tiledraw_4.v" Line 49: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tiledraw_4.v" Line 53: Result of 10-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:1127 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 16: Assignment to tile1 ignored, since the identifier is never used
+
+Elaborating module <bannerdraw_3>.
+WARNING:HDLCompiler:1127 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 21: Assignment to M_hvsync_vga_h_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 22: Assignment to M_hvsync_vga_v_sync ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 23: Assignment to M_hvsync_inDisplayArea ignored, since the identifier is never used
+
+Elaborating module <bannerpart1_9>.
+
+Elaborating module <bannerpart2_10>.
+
+Elaborating module <bannerword1_11>.
+
+Elaborating module <bannerword2_12>.
+
+Elaborating module <bannerword3_13>.
+
+Elaborating module <bannerword4_14>.
+WARNING:HDLCompiler:413 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 84: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 99: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 104: Result of 9-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 115: Result of 9-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 126: Result of 9-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" Line 137: Result of 9-bit expression is truncated to fit in 5-bit target.
+WARNING:Xst:2972 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 16. All outputs of instance <tiles> of block <tilesort_2> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <mojo_top_0>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v".
+    Related source file is "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v".
 WARNING:Xst:647 - Input <quadA> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <quadB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Register <vga_B> equivalent to <vga_R> has been removed
-    Register <vga_G> equivalent to <vga_R> has been removed
-    Found 1-bit register for signal <vga_R>.
-    Found 11-bit comparator lessequal for signal <n0000> created at line 55
-    Found 11-bit comparator lessequal for signal <n0002> created at line 55
-    Found 11-bit comparator lessequal for signal <n0007> created at line 56
-    Found 11-bit comparator lessequal for signal <n0009> created at line 56
-    Found 11-bit comparator lessequal for signal <n0012> created at line 56
-    Found 11-bit comparator lessequal for signal <n0014> created at line 56
-    Found 11-bit comparator lessequal for signal <n0020> created at line 57
-    Found 11-bit comparator lessequal for signal <n0022> created at line 57
-    Found 11-bit comparator lessequal for signal <n0025> created at line 57
-    Found 11-bit comparator lessequal for signal <n0027> created at line 57
-    Found 11-bit comparator lessequal for signal <n0033> created at line 58
-    Found 11-bit comparator lessequal for signal <n0035> created at line 58
-    Found 11-bit comparator lessequal for signal <n0038> created at line 58
-    Found 11-bit comparator lessequal for signal <n0040> created at line 58
-    Found 11-bit comparator lessequal for signal <n0046> created at line 59
-    Found 11-bit comparator lessequal for signal <n0048> created at line 59
-    Found 11-bit comparator lessequal for signal <n0051> created at line 59
-    Found 11-bit comparator lessequal for signal <n0053> created at line 59
-    Found 11-bit comparator lessequal for signal <n0059> created at line 60
-    Found 11-bit comparator lessequal for signal <n0061> created at line 60
-    Found 11-bit comparator lessequal for signal <n0064> created at line 60
-    Found 11-bit comparator lessequal for signal <n0066> created at line 60
-    Found 11-bit comparator lessequal for signal <n0072> created at line 61
-    Found 11-bit comparator lessequal for signal <n0074> created at line 61
-    Found 11-bit comparator lessequal for signal <n0077> created at line 61
-    Found 11-bit comparator lessequal for signal <n0079> created at line 61
-    Found 11-bit comparator lessequal for signal <n0085> created at line 62
-    Found 11-bit comparator lessequal for signal <n0087> created at line 62
-    Found 11-bit comparator lessequal for signal <n0090> created at line 62
-    Found 11-bit comparator lessequal for signal <n0092> created at line 62
-    Found 11-bit comparator lessequal for signal <n0098> created at line 63
-    Found 11-bit comparator lessequal for signal <n0100> created at line 63
-    Found 11-bit comparator lessequal for signal <n0103> created at line 63
-    Found 11-bit comparator lessequal for signal <n0105> created at line 63
-    Found 11-bit comparator lessequal for signal <n0111> created at line 64
-    Found 11-bit comparator lessequal for signal <n0113> created at line 64
-    Found 11-bit comparator lessequal for signal <n0117> created at line 64
-    Found 11-bit comparator lessequal for signal <n0119> created at line 64
-    Found 11-bit comparator lessequal for signal <n0125> created at line 65
-    Found 11-bit comparator lessequal for signal <n0127> created at line 65
-    Found 11-bit comparator lessequal for signal <n0130> created at line 65
-    Found 11-bit comparator lessequal for signal <n0134> created at line 65
-    Found 11-bit comparator lessequal for signal <n0136> created at line 65
-    Found 11-bit comparator lessequal for signal <n0142> created at line 66
-    Found 11-bit comparator lessequal for signal <n0144> created at line 66
-    Found 11-bit comparator lessequal for signal <n0149> created at line 66
-    Found 11-bit comparator lessequal for signal <n0151> created at line 66
-    Found 11-bit comparator lessequal for signal <n0157> created at line 67
-    Found 11-bit comparator lessequal for signal <n0159> created at line 67
-    Found 11-bit comparator lessequal for signal <n0162> created at line 67
-    Found 11-bit comparator lessequal for signal <n0166> created at line 67
-    Found 11-bit comparator lessequal for signal <n0168> created at line 67
-    Found 11-bit comparator lessequal for signal <n0174> created at line 68
-    Found 11-bit comparator lessequal for signal <n0176> created at line 68
-    Found 11-bit comparator lessequal for signal <n0179> created at line 68
-    Found 11-bit comparator lessequal for signal <n0183> created at line 68
-    Found 11-bit comparator lessequal for signal <n0185> created at line 68
-    Found 11-bit comparator lessequal for signal <n0191> created at line 69
-    Found 11-bit comparator lessequal for signal <n0193> created at line 69
-    Found 11-bit comparator lessequal for signal <n0197> created at line 69
-    Found 11-bit comparator lessequal for signal <n0199> created at line 69
-    Found 11-bit comparator lessequal for signal <n0205> created at line 70
-    Found 11-bit comparator lessequal for signal <n0207> created at line 70
-    Found 11-bit comparator lessequal for signal <n0210> created at line 70
-    Found 11-bit comparator lessequal for signal <n0214> created at line 70
-    Found 11-bit comparator lessequal for signal <n0216> created at line 70
-    Found 11-bit comparator lessequal for signal <n0222> created at line 71
-    Found 11-bit comparator lessequal for signal <n0224> created at line 71
-    Found 11-bit comparator lessequal for signal <n0228> created at line 71
-    Found 11-bit comparator lessequal for signal <n0230> created at line 71
-    Found 11-bit comparator lessequal for signal <n0236> created at line 72
-    Found 11-bit comparator lessequal for signal <n0238> created at line 72
-    Found 11-bit comparator lessequal for signal <n0242> created at line 72
-    Found 11-bit comparator lessequal for signal <n0244> created at line 72
-    Found 11-bit comparator lessequal for signal <n0250> created at line 73
-    Found 11-bit comparator lessequal for signal <n0252> created at line 73
-    Found 11-bit comparator lessequal for signal <n0255> created at line 73
-    Found 11-bit comparator lessequal for signal <n0259> created at line 73
-    Found 11-bit comparator lessequal for signal <n0261> created at line 73
-    Found 11-bit comparator lessequal for signal <n0267> created at line 74
-    Found 11-bit comparator lessequal for signal <n0272> created at line 74
-    Found 11-bit comparator lessequal for signal <n0274> created at line 74
-    Found 11-bit comparator lessequal for signal <n0280> created at line 75
-    Found 11-bit comparator lessequal for signal <n0282> created at line 75
-    Found 11-bit comparator lessequal for signal <n0287> created at line 75
-    Found 11-bit comparator lessequal for signal <n0289> created at line 75
-    Found 11-bit comparator lessequal for signal <n0295> created at line 76
-    Found 11-bit comparator lessequal for signal <n0297> created at line 76
-    Found 11-bit comparator lessequal for signal <n0300> created at line 76
-    Found 11-bit comparator lessequal for signal <n0304> created at line 76
-    Found 11-bit comparator lessequal for signal <n0308> created at line 76
-    Found 11-bit comparator lessequal for signal <n0310> created at line 76
-    Found 11-bit comparator lessequal for signal <n0316> created at line 77
-    Found 11-bit comparator lessequal for signal <n0318> created at line 77
-    Found 11-bit comparator lessequal for signal <n0323> created at line 77
-    Found 11-bit comparator lessequal for signal <n0327> created at line 77
-    Found 11-bit comparator lessequal for signal <n0329> created at line 77
-    Found 11-bit comparator lessequal for signal <n0335> created at line 78
-    Found 11-bit comparator lessequal for signal <n0337> created at line 78
-    Found 11-bit comparator lessequal for signal <n0341> created at line 78
-    Found 11-bit comparator lessequal for signal <n0345> created at line 78
-    Found 11-bit comparator lessequal for signal <n0347> created at line 78
-    Found 11-bit comparator lessequal for signal <n0353> created at line 79
-    Found 11-bit comparator lessequal for signal <n0355> created at line 79
-    Found 11-bit comparator lessequal for signal <n0359> created at line 79
-    Found 11-bit comparator lessequal for signal <n0363> created at line 79
-    Found 11-bit comparator lessequal for signal <n0365> created at line 79
-    Found 11-bit comparator lessequal for signal <n0371> created at line 80
-    Found 11-bit comparator lessequal for signal <n0373> created at line 80
-    Found 11-bit comparator lessequal for signal <n0376> created at line 80
-    Found 11-bit comparator lessequal for signal <n0378> created at line 80
-    Found 11-bit comparator lessequal for signal <n0383> created at line 80
-    Found 11-bit comparator lessequal for signal <n0385> created at line 80
-    Found 11-bit comparator lessequal for signal <n0393> created at line 81
-    Found 11-bit comparator lessequal for signal <n0400> created at line 82
-    Found 11-bit comparator lessequal for signal <n0404> created at line 82
-    Found 11-bit comparator lessequal for signal <n0411> created at line 83
-    Found 11-bit comparator lessequal for signal <n0422> created at line 84
-    Found 11-bit comparator lessequal for signal <n0429> created at line 85
-    Found 11-bit comparator lessequal for signal <n0439> created at line 86
-    Found 11-bit comparator lessequal for signal <n0452> created at line 88
-    Found 11-bit comparator lessequal for signal <n0456> created at line 88
-    Found 11-bit comparator lessequal for signal <n0464> created at line 89
-    Found 11-bit comparator lessequal for signal <n0471> created at line 90
-    Found 11-bit comparator lessequal for signal <n0480> created at line 91
-    Found 11-bit comparator lessequal for signal <n0487> created at line 92
-    Found 11-bit comparator lessequal for signal <n0497> created at line 93
-    Found 11-bit comparator lessequal for signal <n0509> created at line 95
-    Found 11-bit comparator lessequal for signal <n0513> created at line 95
-    Found 11-bit comparator lessequal for signal <n0520> created at line 96
-    Found 11-bit comparator lessequal for signal <n0534> created at line 98
-    Found 11-bit comparator lessequal for signal <n0541> created at line 99
-    Found 11-bit comparator lessequal for signal <n0555> created at line 101
-    Found 11-bit comparator lessequal for signal <n0563> created at line 102
-    Found 11-bit comparator lessequal for signal <n0567> created at line 102
-    Found 11-bit comparator lessequal for signal <n0579> created at line 104
-    Found 11-bit comparator lessequal for signal <n0581> created at line 104
-    Found 11-bit comparator lessequal for signal <n0589> created at line 105
-    Found 11-bit comparator lessequal for signal <n0593> created at line 105
-    Found 11-bit comparator lessequal for signal <n0600> created at line 106
-    Found 11-bit comparator lessequal for signal <n0613> created at line 108
-    Found 11-bit comparator lessequal for signal <n0615> created at line 108
-    Found 11-bit comparator lessequal for signal <n0628> created at line 110
-    Found 11-bit comparator lessequal for signal <n0641> created at line 112
-    Found 11-bit comparator lessequal for signal <n0661> created at line 115
-    Found 11-bit comparator lessequal for signal <n0674> created at line 117
-    Found 11-bit comparator lessequal for signal <n0699> created at line 121
-    Found 11-bit comparator lessequal for signal <n0720> created at line 124
-    Found 11-bit comparator lessequal for signal <n0733> created at line 126
-    Found 11-bit comparator lessequal for signal <n0740> created at line 127
-    Found 11-bit comparator lessequal for signal <n0757> created at line 130
-    Found 11-bit comparator lessequal for signal <n0765> created at line 131
-    Found 11-bit comparator lessequal for signal <n0784> created at line 134
-    Found 11-bit comparator lessequal for signal <n0791> created at line 135
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 13: Output port <CounterX> of the instance <syncgen> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 13: Output port <CounterY> of the instance <syncgen> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 16: Output port <tile1> of the instance <tiles> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 16: Output port <tile2> of the instance <tiles> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 16: Output port <tile3> of the instance <tiles> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 16: Output port <tile4> of the instance <tiles> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/mojo_top_0.v" line 16: Output port <tile5> of the instance <tiles> is unconnected or connected to loadless signal.
+    Register <vga_R> equivalent to <vga_G> has been removed
+    Register <vga_B> equivalent to <vga_G> has been removed
+    Found 1-bit register for signal <vga_G>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-	inferred 154 Comparator(s).
 Unit <mojo_top_0> synthesized.
 
 Synthesizing Unit <hvsync_generator_1>.
-    Related source file is "C:/Users/Joel/GitHub/pype/pype-mojo/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v".
+    Related source file is "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/hvsync_generator_1.v".
     Found 9-bit register for signal <CounterY>.
     Found 1-bit register for signal <vga_HS>.
     Found 1-bit register for signal <vga_VS>.
@@ -213,22 +118,173 @@ Synthesizing Unit <hvsync_generator_1>.
 	inferred   1 Multiplexer(s).
 Unit <hvsync_generator_1> synthesized.
 
+Synthesizing Unit <tiledraw_4>.
+    Related source file is "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tiledraw_4.v".
+WARNING:Xst:647 - Input <shape> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <orientation> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tiledraw_4.v" line 23: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tiledraw_4.v" line 23: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/tiledraw_4.v" line 23: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <tiledraw_4> synthesized.
+
+Synthesizing Unit <bram_15>.
+    Related source file is "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bram_15.v".
+    Set property "rom_style = block" for signal <address_reg>.
+    Found 6-bit register for signal <address_reg>.
+    Found 64x51-bit Read Only RAM for signal <outdata>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   6 D-type flip-flop(s).
+Unit <bram_15> synthesized.
+
+Synthesizing Unit <bannerdraw_3>.
+    Related source file is "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v".
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" line 19: Output port <vga_h_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" line 19: Output port <vga_v_sync> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerdraw_3.v" line 19: Output port <inDisplayArea> of the instance <hvsync> is unconnected or connected to loadless signal.
+    Found 12-bit subtractor for signal <n0107> created at line 101.
+    Found 12-bit subtractor for signal <n0111> created at line 111.
+    Found 12-bit subtractor for signal <n0114> created at line 121.
+    Found 12-bit subtractor for signal <n0117> created at line 131.
+    Found 12-bit subtractor for signal <n0120> created at line 141.
+    Found 8-bit subtractor for signal <M_hvsync_CounterY[8]_GND_6_o_sub_5_OUT<7:0>> created at line 84.
+    Found 6-bit subtractor for signal <GND_6_o_GND_6_o_sub_7_OUT<5:0>> created at line 91.
+    Found 6-bit subtractor for signal <GND_6_o_GND_6_o_sub_15_OUT<5:0>> created at line 101.
+    Found 5-bit subtractor for signal <M_hvsync_CounterY[8]_PWR_9_o_sub_21_OUT<4:0>> created at line 104.
+    Found 7-bit subtractor for signal <GND_6_o_GND_6_o_sub_23_OUT<6:0>> created at line 111.
+    Found 7-bit subtractor for signal <GND_6_o_GND_6_o_sub_31_OUT<6:0>> created at line 121.
+    Found 7-bit subtractor for signal <GND_6_o_GND_6_o_sub_39_OUT<6:0>> created at line 131.
+    Found 7-bit subtractor for signal <GND_6_o_GND_6_o_sub_47_OUT<6:0>> created at line 141.
+    Found 113-bit shifter logical right for signal <n0106> created at line 91
+    Found 113-bit shifter logical right for signal <n0109> created at line 101
+    Found 139-bit shifter logical right for signal <n0113> created at line 111
+    Found 141-bit shifter logical right for signal <n0116> created at line 121
+    Found 139-bit shifter logical right for signal <n0119> created at line 131
+    Found 141-bit shifter logical right for signal <n0122> created at line 141
+    Found 11-bit comparator lessequal for signal <n0000> created at line 83
+    Found 11-bit comparator lessequal for signal <n0007> created at line 93
+    Found 11-bit comparator lessequal for signal <n0009> created at line 93
+    Found 9-bit comparator lessequal for signal <n0012> created at line 93
+    Found 9-bit comparator lessequal for signal <n0014> created at line 93
+    Found 11-bit comparator lessequal for signal <n0021> created at line 103
+    Found 11-bit comparator lessequal for signal <n0023> created at line 103
+    Found 11-bit comparator lessequal for signal <n0031> created at line 113
+    Found 11-bit comparator lessequal for signal <n0033> created at line 113
+    Found 11-bit comparator lessequal for signal <n0040> created at line 123
+    Found 11-bit comparator lessequal for signal <n0042> created at line 123
+    Found 11-bit comparator lessequal for signal <n0049> created at line 133
+    Found 11-bit comparator lessequal for signal <n0051> created at line 133
+    Found 9-bit comparator lessequal for signal <n0054> created at line 133
+    Found 9-bit comparator lessequal for signal <n0056> created at line 133
+    Summary:
+	inferred  13 Adder/Subtractor(s).
+	inferred  15 Comparator(s).
+	inferred  27 Multiplexer(s).
+	inferred   6 Combinational logic shifter(s).
+Unit <bannerdraw_3> synthesized.
+
+Synthesizing Unit <bannerpart1_9>.
+    Related source file is "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerpart1_9.v".
+    Set property "rom_style = block" for signal <address_reg>.
+    Found 8-bit register for signal <address_reg>.
+    Found 256x57-bit Read Only RAM for signal <outdata>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <bannerpart1_9> synthesized.
+
+Synthesizing Unit <bannerpart2_10>.
+    Related source file is "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerpart2_10.v".
+    Set property "rom_style = block" for signal <address_reg>.
+    Found 8-bit register for signal <address_reg>.
+    Found 256x57-bit Read Only RAM for signal <outdata>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <bannerpart2_10> synthesized.
+
+Synthesizing Unit <bannerword1_11>.
+    Related source file is "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerword1_11.v".
+    Set property "rom_style = block" for signal <address_reg>.
+    Found 5-bit register for signal <address_reg>.
+    Found 16x70-bit Read Only RAM for signal <_n0052>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <bannerword1_11> synthesized.
+
+Synthesizing Unit <bannerword2_12>.
+    Related source file is "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerword2_12.v".
+    Set property "rom_style = block" for signal <address_reg>.
+    Found 5-bit register for signal <address_reg>.
+    Found 16x71-bit Read Only RAM for signal <_n0052>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <bannerword2_12> synthesized.
+
+Synthesizing Unit <bannerword3_13>.
+    Related source file is "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerword3_13.v".
+    Set property "rom_style = block" for signal <address_reg>.
+    Found 5-bit register for signal <address_reg>.
+    Found 16x70-bit Read Only RAM for signal <_n0052>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <bannerword3_13> synthesized.
+
+Synthesizing Unit <bannerword4_14>.
+    Related source file is "C:/Users/1002357/Desktop/pype536/work/planAhead/pype/pype.srcs/sources_1/imports/verilog/bannerword4_14.v".
+    Set property "rom_style = block" for signal <address_reg>.
+    Found 5-bit register for signal <address_reg>.
+    Found 16x71-bit Read Only RAM for signal <_n0052>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <bannerword4_14> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 2
- 11-bit adder                                          : 1
- 9-bit adder                                           : 1
-# Registers                                            : 6
- 1-bit register                                        : 4
- 11-bit register                                       : 1
- 9-bit register                                        : 1
-# Comparators                                          : 155
- 11-bit comparator lessequal                           : 154
- 9-bit comparator greater                              : 1
-# Multiplexers                                         : 1
- 1-bit 2-to-1 multiplexer                              : 1
+# RAMs                                                 : 6
+ 16x70-bit single-port Read Only RAM                   : 2
+ 16x71-bit single-port Read Only RAM                   : 2
+ 256x57-bit single-port Read Only RAM                  : 2
+# Adders/Subtractors                                   : 17
+ 11-bit adder                                          : 2
+ 12-bit subtractor                                     : 5
+ 5-bit subtractor                                      : 1
+ 6-bit subtractor                                      : 2
+ 7-bit subtractor                                      : 4
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 2
+# Registers                                            : 17
+ 1-bit register                                        : 7
+ 11-bit register                                       : 2
+ 5-bit register                                        : 4
+ 8-bit register                                        : 2
+ 9-bit register                                        : 2
+# Comparators                                          : 17
+ 11-bit comparator lessequal                           : 11
+ 9-bit comparator greater                              : 2
+ 9-bit comparator lessequal                            : 4
+# Multiplexers                                         : 33
+ 1-bit 2-to-1 multiplexer                              : 8
+ 5-bit 2-to-1 multiplexer                              : 18
+ 70-bit 2-to-1 multiplexer                             : 2
+ 71-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# Logic shifters                                       : 6
+ 113-bit shifter logical right                         : 2
+ 139-bit shifter logical right                         : 2
+ 141-bit shifter logical right                         : 2
 
 =========================================================================
 
@@ -236,6 +292,98 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+
+Synthesizing (advanced) Unit <bannerpart1_9>.
+INFO:Xst:3226 - The RAM <Mram_outdata> will be implemented as a BLOCK RAM, absorbing the following register(s): <address_reg>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 57-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <outdata>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <bannerpart1_9> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bannerpart2_10>.
+INFO:Xst:3226 - The RAM <Mram_outdata> will be implemented as a BLOCK RAM, absorbing the following register(s): <address_reg>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 57-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <outdata>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <bannerpart2_10> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bannerword1_11>.
+INFO:Xst:3231 - The small RAM <Mram__n0052> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 70-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <address_reg<3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <bannerword1_11> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bannerword2_12>.
+INFO:Xst:3231 - The small RAM <Mram__n0052> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 71-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <address_reg<3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <bannerword2_12> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bannerword3_13>.
+INFO:Xst:3231 - The small RAM <Mram__n0052> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 70-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <address_reg<3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <bannerword3_13> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bannerword4_14>.
+INFO:Xst:3231 - The small RAM <Mram__n0052> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 71-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <address_reg<3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <bannerword4_14> synthesized (advanced).
 
 Synthesizing (advanced) Unit <hvsync_generator_1>.
 The following registers are absorbed into counter <CounterX>: 1 register on signal <CounterX>.
@@ -246,47 +394,84 @@ Unit <hvsync_generator_1> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 2
- 11-bit up counter                                     : 1
- 9-bit up counter                                      : 1
-# Registers                                            : 4
- Flip-Flops                                            : 4
-# Comparators                                          : 155
- 11-bit comparator lessequal                           : 154
- 9-bit comparator greater                              : 1
+# RAMs                                                 : 6
+ 16x70-bit single-port distributed Read Only RAM       : 2
+ 16x71-bit single-port distributed Read Only RAM       : 2
+ 256x57-bit single-port block Read Only RAM            : 2
+# Adders/Subtractors                                   : 13
+ 5-bit subtractor                                      : 1
+ 6-bit subtractor                                      : 2
+ 7-bit subtractor                                      : 5
+ 8-bit subtractor                                      : 5
+# Counters                                             : 4
+ 11-bit up counter                                     : 2
+ 9-bit up counter                                      : 2
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+# Comparators                                          : 17
+ 11-bit comparator lessequal                           : 11
+ 9-bit comparator greater                              : 2
+ 9-bit comparator lessequal                            : 4
+# Multiplexers                                         : 31
+ 1-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 18
+ 70-bit 2-to-1 multiplexer                             : 2
+ 71-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# Logic shifters                                       : 6
+ 113-bit shifter logical right                         : 2
+ 139-bit shifter logical right                         : 2
+ 141-bit shifter logical right                         : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <banner/hvsync/inDisplayArea> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <banner/hvsync/vga_HS> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <banner/hvsync/vga_VS> of sequential type is unconnected in block <mojo_top_0>.
 
 Optimizing unit <mojo_top_0> ...
-
-Optimizing unit <hvsync_generator_1> ...
+WARNING:Xst:1710 - FF/Latch <banner/word4/address_reg_4> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <banner/word1/address_reg_4> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <banner/word2/address_reg_4> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <banner/word3/address_reg_4> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <banner/word4/address_reg_4> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <banner/word1/address_reg_4> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <banner/word2/address_reg_4> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <banner/word3/address_reg_4> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <banner/word4/address_reg_4> (without init value) has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterX_10> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterX_0> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterX_1> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterX_2> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterX_3> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterX_4> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterX_5> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterX_6> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterX_7> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterX_8> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterX_9> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterX_9> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterY_0> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterY_1> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterY_2> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterY_3> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterY_4> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterY_5> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterY_6> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterY_7> 
+INFO:Xst:2261 - The FF/Latch <syncgen/CounterY_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <banner/hvsync/CounterY_8> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 10.
-FlipFlop syncgen/CounterX_0 has been replicated 4 time(s)
-FlipFlop syncgen/CounterX_1 has been replicated 4 time(s)
-FlipFlop syncgen/CounterX_10 has been replicated 3 time(s)
-FlipFlop syncgen/CounterX_2 has been replicated 4 time(s)
-FlipFlop syncgen/CounterX_3 has been replicated 5 time(s)
-FlipFlop syncgen/CounterX_4 has been replicated 6 time(s)
-FlipFlop syncgen/CounterX_5 has been replicated 7 time(s)
-FlipFlop syncgen/CounterX_6 has been replicated 7 time(s)
-FlipFlop syncgen/CounterX_7 has been replicated 3 time(s)
-FlipFlop syncgen/CounterX_8 has been replicated 5 time(s)
-FlipFlop syncgen/CounterX_9 has been replicated 3 time(s)
-FlipFlop syncgen/CounterY_1 has been replicated 1 time(s)
-FlipFlop syncgen/CounterY_2 has been replicated 1 time(s)
-FlipFlop syncgen/CounterY_3 has been replicated 1 time(s)
-FlipFlop syncgen/CounterY_4 has been replicated 1 time(s)
-FlipFlop syncgen/CounterY_5 has been replicated 1 time(s)
-FlipFlop syncgen/CounterY_6 has been replicated 1 time(s)
-FlipFlop syncgen/CounterY_7 has been replicated 1 time(s)
-FlipFlop syncgen/CounterY_8 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 6.
+FlipFlop syncgen/CounterX_0 has been replicated 3 time(s)
+FlipFlop syncgen/CounterX_1 has been replicated 5 time(s)
+FlipFlop syncgen/CounterX_2 has been replicated 5 time(s)
+FlipFlop syncgen/CounterX_3 has been replicated 4 time(s)
+FlipFlop syncgen/CounterX_4 has been replicated 3 time(s)
+FlipFlop syncgen/CounterX_5 has been replicated 2 time(s)
 
 Final Macro Processing ...
 
@@ -294,8 +479,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 83
- Flip-Flops                                            : 83
+# Registers                                            : 62
+ Flip-Flops                                            : 62
 
 =========================================================================
 
@@ -319,7 +504,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 83    |
+clk                                | BUFGP                  | 66    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -330,7 +515,7 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 9.343ns (Maximum Frequency: 107.032MHz)
+   Minimum period: 8.071ns (Maximum Frequency: 123.900MHz)
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: 5.054ns
    Maximum combinational path delay: No path found

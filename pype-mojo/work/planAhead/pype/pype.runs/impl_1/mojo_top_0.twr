@@ -28,16 +28,16 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 25 MHz HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 9739 paths analyzed, 219 endpoints analyzed, 0 failing endpoints
+ 6690 paths analyzed, 258 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  10.833ns.
+ Minimum period is  11.667ns.
 --------------------------------------------------------------------------------
-Slack:                  29.167ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  28.333ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      10.783ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      11.615ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -48,46 +48,42 @@ Slack:                  29.167ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X17Y26.B3      net (fanout=10)       2.040   CounterX_9_1
-    SLICE_X17Y26.B       Tilo                  0.259   N281
-                                                       GND_1_o_CounterX[10]_AND_109_o11_1
-    SLICE_X15Y20.A2      net (fanout=14)       2.430   GND_1_o_CounterX[10]_AND_109_o11
-    SLICE_X15Y20.A       Tilo                  0.259   R_inv118
-                                                       CounterX[10]_GND_1_o_LessThan_202_o11
-    SLICE_X20Y26.B6      net (fanout=3)        1.402   CounterX[10]_GND_1_o_LessThan_202_o
-    SLICE_X20Y26.B       Tilo                  0.254   R_inv51
-                                                       R_inv48
-    SLICE_X20Y26.D1      net (fanout=2)        0.605   R_inv51
-    SLICE_X20Y26.CMUX    Topdc                 0.456   R_inv51
-                                                       R_inv49_SW1_F
-                                                       R_inv49_SW1
-    SLICE_X14Y25.A5      net (fanout=1)        1.141   N244
-    SLICE_X14Y25.A       Tilo                  0.235   N243
-                                                       R_inv51
-    SLICE_X19Y25.B6      net (fanout=1)        0.410   R_inv54
-    SLICE_X19Y25.B       Tilo                  0.259   vga_B_OBUF
-                                                       R_inv59
-    SLICE_X19Y25.A5      net (fanout=1)        0.230   R_inv62
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X10Y22.AQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_1
+    SLICE_X5Y46.C1       net (fanout=10)       2.957   CounterX_0_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X9Y21.B4       net (fanout=16)       2.572   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X9Y21.B        Tilo                  0.259   out_inv31
+                                                       out_inv51_SW0
+    SLICE_X4Y16.A6       net (fanout=1)        1.171   N34
+    SLICE_X4Y16.A        Tilo                  0.254   N35
+                                                       out_inv51
+    SLICE_X6Y16.D3       net (fanout=1)        0.856   out_inv51
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                     10.783ns (2.525ns logic, 8.258ns route)
-                                                       (23.4% logic, 76.6% route)
+    Total                                     11.615ns (1.913ns logic, 9.702ns route)
+                                                       (16.5% logic, 83.5% route)
 
 --------------------------------------------------------------------------------
-Slack:                  29.461ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  29.019ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      10.489ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      10.929ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -98,46 +94,42 @@ Slack:                  29.461ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X17Y26.B3      net (fanout=10)       2.040   CounterX_9_1
-    SLICE_X17Y26.B       Tilo                  0.259   N281
-                                                       GND_1_o_CounterX[10]_AND_109_o11_1
-    SLICE_X15Y20.A2      net (fanout=14)       2.430   GND_1_o_CounterX[10]_AND_109_o11
-    SLICE_X15Y20.A       Tilo                  0.259   R_inv118
-                                                       CounterX[10]_GND_1_o_LessThan_202_o11
-    SLICE_X20Y26.B6      net (fanout=3)        1.402   CounterX[10]_GND_1_o_LessThan_202_o
-    SLICE_X20Y26.B       Tilo                  0.254   R_inv51
-                                                       R_inv48
-    SLICE_X20Y26.C4      net (fanout=2)        0.337   R_inv51
-    SLICE_X20Y26.CMUX    Tilo                  0.430   R_inv51
-                                                       R_inv49_SW1_G
-                                                       R_inv49_SW1
-    SLICE_X14Y25.A5      net (fanout=1)        1.141   N244
-    SLICE_X14Y25.A       Tilo                  0.235   N243
-                                                       R_inv51
-    SLICE_X19Y25.B6      net (fanout=1)        0.410   R_inv54
-    SLICE_X19Y25.B       Tilo                  0.259   vga_B_OBUF
-                                                       R_inv59
-    SLICE_X19Y25.A5      net (fanout=1)        0.230   R_inv62
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X10Y22.AQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_1
+    SLICE_X5Y46.C1       net (fanout=10)       2.957   CounterX_0_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X4Y16.B5       net (fanout=16)       2.815   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X4Y16.B        Tilo                  0.254   N35
+                                                       out_inv51_SW1
+    SLICE_X4Y16.A5       net (fanout=1)        0.247   N35
+    SLICE_X4Y16.A        Tilo                  0.254   N35
+                                                       out_inv51
+    SLICE_X6Y16.D3       net (fanout=1)        0.856   out_inv51
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                     10.489ns (2.499ns logic, 7.990ns route)
-                                                       (23.8% logic, 76.2% route)
+    Total                                     10.929ns (1.908ns logic, 9.021ns route)
+                                                       (17.5% logic, 82.5% route)
 
 --------------------------------------------------------------------------------
-Slack:                  29.666ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  29.233ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      10.284ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      10.715ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -148,46 +140,42 @@ Slack:                  29.666ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X13Y18.B4      net (fanout=10)       1.434   CounterX_9_1
-    SLICE_X13Y18.B       Tilo                  0.259   CounterX[10]_GND_1_o_LessThan_537_o121
-                                                       CounterX[10]_GND_1_o_LessThan_537_o121_1
-    SLICE_X20Y21.B1      net (fanout=13)       1.860   CounterX[10]_GND_1_o_LessThan_537_o121
-    SLICE_X20Y21.B       Tilo                  0.254   N110
-                                                       CounterX[10]_GND_1_o_LessThan_38_o1
-    SLICE_X16Y20.A3      net (fanout=3)        1.241   CounterX[10]_GND_1_o_LessThan_38_o
-    SLICE_X16Y20.A       Tilo                  0.254   SF8383
-                                                       GND_1_o_CounterX[10]_AND_16_o1
-    SLICE_X20Y26.D6      net (fanout=5)        1.448   GND_1_o_CounterX[10]_AND_16_o
-    SLICE_X20Y26.CMUX    Topdc                 0.456   R_inv51
-                                                       R_inv49_SW1_F
-                                                       R_inv49_SW1
-    SLICE_X14Y25.A5      net (fanout=1)        1.141   N244
-    SLICE_X14Y25.A       Tilo                  0.235   N243
-                                                       R_inv51
-    SLICE_X19Y25.B6      net (fanout=1)        0.410   R_inv54
-    SLICE_X19Y25.B       Tilo                  0.259   vga_B_OBUF
-                                                       R_inv59
-    SLICE_X19Y25.A5      net (fanout=1)        0.230   R_inv62
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X10Y22.AQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_1
+    SLICE_X5Y46.C1       net (fanout=10)       2.957   CounterX_0_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X6Y16.A3       net (fanout=16)       2.953   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X6Y16.A        Tilo                  0.235   out_inv61
+                                                       out_inv60_SW0
+    SLICE_X6Y16.C1       net (fanout=1)        0.538   N76
+    SLICE_X6Y16.C        Tilo                  0.235   out_inv61
+                                                       out_inv60
+    SLICE_X6Y16.D5       net (fanout=1)        0.251   out_inv60
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                     10.284ns (2.520ns logic, 7.764ns route)
-                                                       (24.5% logic, 75.5% route)
+    Total                                     10.715ns (1.870ns logic, 8.845ns route)
+                                                       (17.5% logic, 82.5% route)
 
 --------------------------------------------------------------------------------
-Slack:                  29.692ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  29.239ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_2_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      10.258ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      10.700ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.026ns (0.718 - 0.744)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -198,46 +186,42 @@ Slack:                  29.692ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_2_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X13Y18.B4      net (fanout=10)       1.434   CounterX_9_1
-    SLICE_X13Y18.B       Tilo                  0.259   CounterX[10]_GND_1_o_LessThan_537_o121
-                                                       CounterX[10]_GND_1_o_LessThan_537_o121_1
-    SLICE_X20Y21.B1      net (fanout=13)       1.860   CounterX[10]_GND_1_o_LessThan_537_o121
-    SLICE_X20Y21.B       Tilo                  0.254   N110
-                                                       CounterX[10]_GND_1_o_LessThan_38_o1
-    SLICE_X16Y20.A3      net (fanout=3)        1.241   CounterX[10]_GND_1_o_LessThan_38_o
-    SLICE_X16Y20.A       Tilo                  0.254   SF8383
-                                                       GND_1_o_CounterX[10]_AND_16_o1
-    SLICE_X20Y26.C6      net (fanout=5)        1.448   GND_1_o_CounterX[10]_AND_16_o
-    SLICE_X20Y26.CMUX    Tilo                  0.430   R_inv51
-                                                       R_inv49_SW1_G
-                                                       R_inv49_SW1
-    SLICE_X14Y25.A5      net (fanout=1)        1.141   N244
-    SLICE_X14Y25.A       Tilo                  0.235   N243
-                                                       R_inv51
-    SLICE_X19Y25.B6      net (fanout=1)        0.410   R_inv54
-    SLICE_X19Y25.B       Tilo                  0.259   vga_B_OBUF
-                                                       R_inv59
-    SLICE_X19Y25.A5      net (fanout=1)        0.230   R_inv62
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X8Y29.AQ       Tcko                  0.525   CounterX_2_4
+                                                       syncgen/CounterX_2_1
+    SLICE_X5Y46.C4       net (fanout=16)       1.993   CounterX_2_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X9Y21.B4       net (fanout=16)       2.572   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X9Y21.B        Tilo                  0.259   out_inv31
+                                                       out_inv51_SW0
+    SLICE_X4Y16.A6       net (fanout=1)        1.171   N34
+    SLICE_X4Y16.A        Tilo                  0.254   N35
+                                                       out_inv51
+    SLICE_X6Y16.D3       net (fanout=1)        0.856   out_inv51
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                     10.258ns (2.494ns logic, 7.764ns route)
-                                                       (24.3% logic, 75.7% route)
+    Total                                     10.700ns (1.962ns logic, 8.738ns route)
+                                                       (18.3% logic, 81.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  29.706ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  29.252ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      10.244ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      10.696ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -248,45 +232,42 @@ Slack:                  29.706ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X16Y27.B2      net (fanout=10)       2.022   CounterX_9_1
-    SLICE_X16Y27.B       Tilo                  0.254   N100
-                                                       GND_1_o_CounterX[10]_LessThan_169_o111_1
-    SLICE_X21Y23.B2      net (fanout=14)       1.430   GND_1_o_CounterX[10]_LessThan_169_o111
-    SLICE_X21Y23.B       Tilo                  0.259   N6
-                                                       GND_1_o_CounterX[10]_LessThan_57_o1
-    SLICE_X17Y21.D2      net (fanout=5)        1.383   GND_1_o_CounterX[10]_LessThan_57_o
-    SLICE_X17Y21.D       Tilo                  0.259   CounterX_7_3
-                                                       R_inv201_SW0
-    SLICE_X21Y26.C1      net (fanout=1)        1.562   N80
-    SLICE_X21Y26.C       Tilo                  0.259   GND_1_o_CounterX[10]_AND_14_o
-                                                       R_inv201
-    SLICE_X18Y26.D6      net (fanout=1)        0.559   R_inv201
-    SLICE_X18Y26.D       Tilo                  0.235   R_inv215
-                                                       R_inv215
-    SLICE_X18Y26.C6      net (fanout=1)        0.143   R_inv215
-    SLICE_X18Y26.C       Tilo                  0.235   R_inv215
-                                                       R_inv241
-    SLICE_X19Y25.A1      net (fanout=1)        0.841   R_inv241
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X10Y22.AQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_1
+    SLICE_X5Y46.C1       net (fanout=10)       2.957   CounterX_0_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X9Y21.D1       net (fanout=16)       2.751   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X9Y21.D        Tilo                  0.259   out_inv31
+                                                       out_inv31
+    SLICE_X9Y21.C6       net (fanout=1)        0.143   out_inv31
+    SLICE_X9Y21.C        Tilo                  0.259   out_inv31
+                                                       out_inv361
+    SLICE_X8Y17.D2       net (fanout=1)        1.002   out_inv36
+    SLICE_X8Y17.D        Tilo                  0.254   out_inv42
+                                                       out_inv42
+    SLICE_X8Y17.C4       net (fanout=1)        0.456   out_inv42
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                     10.244ns (2.304ns logic, 7.940ns route)
-                                                       (22.5% logic, 77.5% route)
+    Total                                     10.696ns (1.937ns logic, 8.759ns route)
+                                                       (18.1% logic, 81.9% route)
 
 --------------------------------------------------------------------------------
-Slack:                  29.834ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_7_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  29.340ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_1_3 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      10.111ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.020ns (0.286 - 0.306)
+  Data Path Delay:      10.598ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.027ns (0.718 - 0.745)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -297,42 +278,42 @@ Slack:                  29.834ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_7_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_1_3 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y21.AQ      Tcko                  0.430   CounterX_7_3
-                                                       syncgen/CounterX_7_1
-    SLICE_X8Y24.B1       net (fanout=7)        1.437   CounterX_7_1
-    SLICE_X8Y24.B        Tilo                  0.254   GND_1_o_CounterX[10]_LessThan_147_o
-                                                       GND_1_o_CounterX[10]_LessThan_212_o21
-    SLICE_X21Y27.D2      net (fanout=18)       1.635   GND_1_o_CounterX[10]_LessThan_212_o2
-    SLICE_X21Y27.D       Tilo                  0.259   GND_1_o_CounterX[10]_LessThan_100_o
-                                                       GND_1_o_CounterX[10]_LessThan_100_o1
-    SLICE_X12Y24.B2      net (fanout=2)        2.237   GND_1_o_CounterX[10]_LessThan_100_o
-    SLICE_X12Y24.B       Tilo                  0.254   R_inv27
-                                                       R_inv228
-    SLICE_X18Y22.D4      net (fanout=1)        0.971   R_inv228
-    SLICE_X18Y22.D       Tilo                  0.235   N307
-                                                       R_inv240_SW0
-    SLICE_X18Y26.C2      net (fanout=1)        0.950   N307
-    SLICE_X18Y26.C       Tilo                  0.235   R_inv215
-                                                       R_inv241
-    SLICE_X19Y25.A1      net (fanout=1)        0.841   R_inv241
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X6Y21.CQ       Tcko                  0.476   CounterX_1_4
+                                                       syncgen/CounterX_1_3
+    SLICE_X5Y46.C5       net (fanout=13)       1.940   CounterX_1_3
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X9Y21.B4       net (fanout=16)       2.572   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X9Y21.B        Tilo                  0.259   out_inv31
+                                                       out_inv51_SW0
+    SLICE_X4Y16.A6       net (fanout=1)        1.171   N34
+    SLICE_X4Y16.A        Tilo                  0.254   N35
+                                                       out_inv51
+    SLICE_X6Y16.D3       net (fanout=1)        0.856   out_inv51
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                     10.111ns (2.040ns logic, 8.071ns route)
-                                                       (20.2% logic, 79.8% route)
+    Total                                     10.598ns (1.913ns logic, 8.685ns route)
+                                                       (18.1% logic, 81.9% route)
 
 --------------------------------------------------------------------------------
-Slack:                  29.904ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_10_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  29.619ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_2_3 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      10.046ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      10.320ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.026ns (0.718 - 0.744)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -343,46 +324,42 @@ Slack:                  29.904ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_10_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_2_3 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y23.AQ      Tcko                  0.525   CounterX_10_3
-                                                       syncgen/CounterX_10_1
-    SLICE_X13Y18.B3      net (fanout=12)       1.101   CounterX_10_1
-    SLICE_X13Y18.B       Tilo                  0.259   CounterX[10]_GND_1_o_LessThan_537_o121
-                                                       CounterX[10]_GND_1_o_LessThan_537_o121_1
-    SLICE_X20Y21.B1      net (fanout=13)       1.860   CounterX[10]_GND_1_o_LessThan_537_o121
-    SLICE_X20Y21.B       Tilo                  0.254   N110
-                                                       CounterX[10]_GND_1_o_LessThan_38_o1
-    SLICE_X16Y20.A3      net (fanout=3)        1.241   CounterX[10]_GND_1_o_LessThan_38_o
-    SLICE_X16Y20.A       Tilo                  0.254   SF8383
-                                                       GND_1_o_CounterX[10]_AND_16_o1
-    SLICE_X20Y26.D6      net (fanout=5)        1.448   GND_1_o_CounterX[10]_AND_16_o
-    SLICE_X20Y26.CMUX    Topdc                 0.456   R_inv51
-                                                       R_inv49_SW1_F
-                                                       R_inv49_SW1
-    SLICE_X14Y25.A5      net (fanout=1)        1.141   N244
-    SLICE_X14Y25.A       Tilo                  0.235   N243
-                                                       R_inv51
-    SLICE_X19Y25.B6      net (fanout=1)        0.410   R_inv54
-    SLICE_X19Y25.B       Tilo                  0.259   vga_B_OBUF
-                                                       R_inv59
-    SLICE_X19Y25.A5      net (fanout=1)        0.230   R_inv62
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X8Y29.CQ       Tcko                  0.525   CounterX_2_4
+                                                       syncgen/CounterX_2_3
+    SLICE_X2Y16.A2       net (fanout=12)       2.352   CounterX_2_3
+    SLICE_X2Y16.A        Tilo                  0.235   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_lut[2]
+                                                       banner/Msub_n0120_Madd_xor<3>11
+    SLICE_X9Y21.B2       net (fanout=4)        1.857   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_lut[2]
+    SLICE_X9Y21.B        Tilo                  0.259   out_inv31
+                                                       out_inv51_SW0
+    SLICE_X4Y16.A6       net (fanout=1)        1.171   N34
+    SLICE_X4Y16.A        Tilo                  0.254   N35
+                                                       out_inv51
+    SLICE_X6Y16.D3       net (fanout=1)        0.856   out_inv51
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                     10.046ns (2.615ns logic, 7.431ns route)
-                                                       (26.0% logic, 74.0% route)
+    Total                                     10.320ns (1.938ns logic, 8.382ns route)
+                                                       (18.8% logic, 81.2% route)
 
 --------------------------------------------------------------------------------
-Slack:                  29.912ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_10_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  29.898ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_1_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      10.038ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      10.040ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.027ns (0.718 - 0.745)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -393,45 +370,40 @@ Slack:                  29.912ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_10_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_1_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y23.AQ      Tcko                  0.525   CounterX_10_3
-                                                       syncgen/CounterX_10_1
-    SLICE_X17Y18.B1      net (fanout=12)       1.480   CounterX_10_1
-    SLICE_X17Y18.B       Tilo                  0.259   GND_1_o_CounterX[10]_LessThan_653_o111
-                                                       GND_1_o_CounterX[10]_LessThan_653_o111_1
-    SLICE_X13Y23.A2      net (fanout=13)       2.135   GND_1_o_CounterX[10]_LessThan_653_o111
-    SLICE_X13Y23.A       Tilo                  0.259   CounterX_5_7
-                                                       GND_1_o_CounterX[10]_LessThan_64_o11
-    SLICE_X14Y23.B5      net (fanout=5)        0.459   GND_1_o_CounterX[10]_LessThan_64_o
-    SLICE_X14Y23.B       Tilo                  0.235   CounterX[10]_GND_1_o_LessThan_418_o21
-                                                       GND_1_o_GND_1_o_OR_72_o1
-    SLICE_X20Y23.C2      net (fanout=2)        1.503   GND_1_o_GND_1_o_OR_72_o
-    SLICE_X20Y23.C       Tilo                  0.255   N203
-                                                       R_inv172
-    SLICE_X16Y23.D1      net (fanout=1)        1.228   R_inv173
-    SLICE_X16Y23.D       Tilo                  0.254   CounterX_10_3
-                                                       R_inv242_SW0_SW0
-    SLICE_X16Y23.C6      net (fanout=1)        0.143   N319
-    SLICE_X16Y23.C       Tilo                  0.255   CounterX_10_3
-                                                       R_inv242_SW0
-    SLICE_X19Y25.A6      net (fanout=1)        0.675   N207
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X6Y21.AQ       Tcko                  0.476   CounterX_1_4
+                                                       syncgen/CounterX_1_1
+    SLICE_X10Y22.A5      net (fanout=5)        0.930   CounterX_1_1
+    SLICE_X10Y22.A       Tilo                  0.235   CounterX_0_3
+                                                       banner/GND_6_o_PWR_9_o_AND_32_o111
+    SLICE_X5Y43.D6       net (fanout=11)       2.815   GND_6_o_PWR_9_o_AND_32_o11
+    SLICE_X5Y43.D        Tilo                  0.259   out_inv83
+                                                       out_inv83
+    SLICE_X5Y42.A4       net (fanout=1)        0.687   out_inv83
+    SLICE_X5Y42.A        Tilo                  0.259   out_inv81
+                                                       out_inv84
+    SLICE_X4Y46.C1       net (fanout=2)        1.507   out_inv84
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                     10.038ns (2.415ns logic, 7.623ns route)
-                                                       (24.1% logic, 75.9% route)
+    Total                                     10.040ns (1.907ns logic, 8.133ns route)
+                                                       (19.0% logic, 81.0% route)
 
 --------------------------------------------------------------------------------
-Slack:                  29.930ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_10_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  29.925ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_2_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      10.020ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      10.014ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.026ns (0.718 - 0.744)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -442,46 +414,42 @@ Slack:                  29.930ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_10_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_2_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y23.AQ      Tcko                  0.525   CounterX_10_3
-                                                       syncgen/CounterX_10_1
-    SLICE_X13Y18.B3      net (fanout=12)       1.101   CounterX_10_1
-    SLICE_X13Y18.B       Tilo                  0.259   CounterX[10]_GND_1_o_LessThan_537_o121
-                                                       CounterX[10]_GND_1_o_LessThan_537_o121_1
-    SLICE_X20Y21.B1      net (fanout=13)       1.860   CounterX[10]_GND_1_o_LessThan_537_o121
-    SLICE_X20Y21.B       Tilo                  0.254   N110
-                                                       CounterX[10]_GND_1_o_LessThan_38_o1
-    SLICE_X16Y20.A3      net (fanout=3)        1.241   CounterX[10]_GND_1_o_LessThan_38_o
-    SLICE_X16Y20.A       Tilo                  0.254   SF8383
-                                                       GND_1_o_CounterX[10]_AND_16_o1
-    SLICE_X20Y26.C6      net (fanout=5)        1.448   GND_1_o_CounterX[10]_AND_16_o
-    SLICE_X20Y26.CMUX    Tilo                  0.430   R_inv51
-                                                       R_inv49_SW1_G
-                                                       R_inv49_SW1
-    SLICE_X14Y25.A5      net (fanout=1)        1.141   N244
-    SLICE_X14Y25.A       Tilo                  0.235   N243
-                                                       R_inv51
-    SLICE_X19Y25.B6      net (fanout=1)        0.410   R_inv54
-    SLICE_X19Y25.B       Tilo                  0.259   vga_B_OBUF
-                                                       R_inv59
-    SLICE_X19Y25.A5      net (fanout=1)        0.230   R_inv62
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X8Y29.AQ       Tcko                  0.525   CounterX_2_4
+                                                       syncgen/CounterX_2_1
+    SLICE_X5Y46.C4       net (fanout=16)       1.993   CounterX_2_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X4Y16.B5       net (fanout=16)       2.815   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X4Y16.B        Tilo                  0.254   N35
+                                                       out_inv51_SW1
+    SLICE_X4Y16.A5       net (fanout=1)        0.247   N35
+    SLICE_X4Y16.A        Tilo                  0.254   N35
+                                                       out_inv51
+    SLICE_X6Y16.D3       net (fanout=1)        0.856   out_inv51
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                     10.020ns (2.589ns logic, 7.431ns route)
-                                                       (25.8% logic, 74.2% route)
+    Total                                     10.014ns (1.957ns logic, 8.057ns route)
+                                                       (19.5% logic, 80.5% route)
 
 --------------------------------------------------------------------------------
-Slack:                  29.946ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  30.026ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_1_3 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      10.004ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      9.912ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.027ns (0.718 - 0.745)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -492,42 +460,42 @@ Slack:                  29.946ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_1_3 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X17Y26.B3      net (fanout=10)       2.040   CounterX_9_1
-    SLICE_X17Y26.B       Tilo                  0.259   N281
-                                                       GND_1_o_CounterX[10]_AND_109_o11_1
-    SLICE_X15Y20.A2      net (fanout=14)       2.430   GND_1_o_CounterX[10]_AND_109_o11
-    SLICE_X15Y20.A       Tilo                  0.259   R_inv118
-                                                       CounterX[10]_GND_1_o_LessThan_202_o11
-    SLICE_X18Y21.C3      net (fanout=3)        0.887   CounterX[10]_GND_1_o_LessThan_202_o
-    SLICE_X18Y21.C       Tilo                  0.235   R_inv192
-                                                       R_inv114
-    SLICE_X17Y28.B5      net (fanout=1)        0.919   R_inv116
-    SLICE_X17Y28.B       Tilo                  0.259   R_inv223
-                                                       R_inv115
-    SLICE_X16Y23.C2      net (fanout=1)        0.983   R_inv117
-    SLICE_X16Y23.C       Tilo                  0.255   CounterX_10_3
-                                                       R_inv242_SW0
-    SLICE_X19Y25.A6      net (fanout=1)        0.675   N207
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X6Y21.CQ       Tcko                  0.476   CounterX_1_4
+                                                       syncgen/CounterX_1_3
+    SLICE_X5Y46.C5       net (fanout=13)       1.940   CounterX_1_3
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X4Y16.B5       net (fanout=16)       2.815   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X4Y16.B        Tilo                  0.254   N35
+                                                       out_inv51_SW1
+    SLICE_X4Y16.A5       net (fanout=1)        0.247   N35
+    SLICE_X4Y16.A        Tilo                  0.254   N35
+                                                       out_inv51
+    SLICE_X6Y16.D3       net (fanout=1)        0.856   out_inv51
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                     10.004ns (2.070ns logic, 7.934ns route)
-                                                       (20.7% logic, 79.3% route)
+    Total                                      9.912ns (1.908ns logic, 8.004ns route)
+                                                       (19.2% logic, 80.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  29.979ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  30.139ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_2_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      9.971ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      9.800ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.026ns (0.718 - 0.744)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -538,43 +506,42 @@ Slack:                  29.979ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_2_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X13Y18.B4      net (fanout=10)       1.434   CounterX_9_1
-    SLICE_X13Y18.B       Tilo                  0.259   CounterX[10]_GND_1_o_LessThan_537_o121
-                                                       CounterX[10]_GND_1_o_LessThan_537_o121_1
-    SLICE_X21Y26.B1      net (fanout=13)       1.907   CounterX[10]_GND_1_o_LessThan_537_o121
-    SLICE_X21Y26.B       Tilo                  0.259   GND_1_o_CounterX[10]_AND_14_o
-                                                       CounterX[10]_GND_1_o_LessThan_35_o11
-    SLICE_X14Y18.C4      net (fanout=9)        1.771   CounterX[10]_GND_1_o_LessThan_35_o
-    SLICE_X14Y18.CMUX    Tilo                  0.403   R_inv74
-                                                       R_inv70_G
-                                                       R_inv70
-    SLICE_X14Y18.A3      net (fanout=1)        0.877   R_inv73
-    SLICE_X14Y18.A       Tilo                  0.235   R_inv74
-                                                       R_inv75
-    SLICE_X18Y27.C3      net (fanout=1)        1.275   R_inv78
-    SLICE_X18Y27.C       Tilo                  0.235   R_inv107
-                                                       R_inv112
-    SLICE_X19Y25.A4      net (fanout=1)        0.513   R_inv114
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X8Y29.AQ       Tcko                  0.525   CounterX_2_4
+                                                       syncgen/CounterX_2_1
+    SLICE_X5Y46.C4       net (fanout=16)       1.993   CounterX_2_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X6Y16.A3       net (fanout=16)       2.953   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X6Y16.A        Tilo                  0.235   out_inv61
+                                                       out_inv60_SW0
+    SLICE_X6Y16.C1       net (fanout=1)        0.538   N76
+    SLICE_X6Y16.C        Tilo                  0.235   out_inv61
+                                                       out_inv60
+    SLICE_X6Y16.D5       net (fanout=1)        0.251   out_inv60
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                      9.971ns (2.194ns logic, 7.777ns route)
-                                                       (22.0% logic, 78.0% route)
+    Total                                      9.800ns (1.919ns logic, 7.881ns route)
+                                                       (19.6% logic, 80.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  30.022ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_8_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  30.146ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      9.925ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.018ns (0.286 - 0.304)
+  Data Path Delay:      9.802ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -585,45 +552,40 @@ Slack:                  30.022ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_8_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y26.AQ      Tcko                  0.525   CounterX_8_4
-                                                       syncgen/CounterX_8_1
-    SLICE_X17Y18.B3      net (fanout=5)        1.367   CounterX_8_1
-    SLICE_X17Y18.B       Tilo                  0.259   GND_1_o_CounterX[10]_LessThan_653_o111
-                                                       GND_1_o_CounterX[10]_LessThan_653_o111_1
-    SLICE_X13Y23.A2      net (fanout=13)       2.135   GND_1_o_CounterX[10]_LessThan_653_o111
-    SLICE_X13Y23.A       Tilo                  0.259   CounterX_5_7
-                                                       GND_1_o_CounterX[10]_LessThan_64_o11
-    SLICE_X14Y23.B5      net (fanout=5)        0.459   GND_1_o_CounterX[10]_LessThan_64_o
-    SLICE_X14Y23.B       Tilo                  0.235   CounterX[10]_GND_1_o_LessThan_418_o21
-                                                       GND_1_o_GND_1_o_OR_72_o1
-    SLICE_X20Y23.C2      net (fanout=2)        1.503   GND_1_o_GND_1_o_OR_72_o
-    SLICE_X20Y23.C       Tilo                  0.255   N203
-                                                       R_inv172
-    SLICE_X16Y23.D1      net (fanout=1)        1.228   R_inv173
-    SLICE_X16Y23.D       Tilo                  0.254   CounterX_10_3
-                                                       R_inv242_SW0_SW0
-    SLICE_X16Y23.C6      net (fanout=1)        0.143   N319
-    SLICE_X16Y23.C       Tilo                  0.255   CounterX_10_3
-                                                       R_inv242_SW0
-    SLICE_X19Y25.A6      net (fanout=1)        0.675   N207
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X10Y22.AQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_1
+    SLICE_X5Y46.C1       net (fanout=10)       2.957   CounterX_0_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X4Y40.D6       net (fanout=16)       0.847   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X4Y40.D        Tilo                  0.254   out_inv108
+                                                       out_inv108
+    SLICE_X5Y41.C3       net (fanout=1)        0.668   out_inv108
+    SLICE_X5Y41.C        Tilo                  0.259   out_inv110
+                                                       out_inv111
+    SLICE_X4Y46.C2       net (fanout=2)        1.210   out_inv111
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                      9.925ns (2.415ns logic, 7.510ns route)
-                                                       (24.3% logic, 75.7% route)
+    Total                                      9.802ns (1.926ns logic, 7.876ns route)
+                                                       (19.6% logic, 80.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  30.044ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  30.158ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_2_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      9.906ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      9.781ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.026ns (0.718 - 0.744)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -634,45 +596,42 @@ Slack:                  30.044ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_2_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X17Y26.B3      net (fanout=10)       2.040   CounterX_9_1
-    SLICE_X17Y26.B       Tilo                  0.259   N281
-                                                       GND_1_o_CounterX[10]_AND_109_o11_1
-    SLICE_X17Y17.A4      net (fanout=14)       1.285   GND_1_o_CounterX[10]_AND_109_o11
-    SLICE_X17Y17.A       Tilo                  0.259   N238
-                                                       CounterX[10]_GND_1_o_LessThan_131_o11
-    SLICE_X16Y25.D2      net (fanout=1)        1.615   CounterX[10]_GND_1_o_LessThan_131_o
-    SLICE_X16Y25.D       Tilo                  0.254   R_inv216
-                                                       R_inv216
-    SLICE_X18Y22.C6      net (fanout=1)        0.644   R_inv216
-    SLICE_X18Y22.C       Tilo                  0.235   N307
-                                                       R_inv218
-    SLICE_X18Y22.D5      net (fanout=1)        0.251   R_inv218
-    SLICE_X18Y22.D       Tilo                  0.235   N307
-                                                       R_inv240_SW0
-    SLICE_X18Y26.C2      net (fanout=1)        0.950   N307
-    SLICE_X18Y26.C       Tilo                  0.235   R_inv215
-                                                       R_inv241
-    SLICE_X19Y25.A1      net (fanout=1)        0.841   R_inv241
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X8Y29.AQ       Tcko                  0.525   CounterX_2_4
+                                                       syncgen/CounterX_2_1
+    SLICE_X5Y46.C4       net (fanout=16)       1.993   CounterX_2_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X9Y21.D1       net (fanout=16)       2.751   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X9Y21.D        Tilo                  0.259   out_inv31
+                                                       out_inv31
+    SLICE_X9Y21.C6       net (fanout=1)        0.143   out_inv31
+    SLICE_X9Y21.C        Tilo                  0.259   out_inv31
+                                                       out_inv361
+    SLICE_X8Y17.D2       net (fanout=1)        1.002   out_inv36
+    SLICE_X8Y17.D        Tilo                  0.254   out_inv42
+                                                       out_inv42
+    SLICE_X8Y17.C4       net (fanout=1)        0.456   out_inv42
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                      9.906ns (2.280ns logic, 7.626ns route)
-                                                       (23.0% logic, 77.0% route)
+    Total                                      9.781ns (1.986ns logic, 7.795ns route)
+                                                       (20.3% logic, 79.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  30.060ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_6_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  30.159ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      9.889ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.016ns (0.286 - 0.302)
+  Data Path Delay:      9.789ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -683,42 +642,40 @@ Slack:                  30.060ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_6_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X15Y22.AQ      Tcko                  0.430   CounterX_6_4
-                                                       syncgen/CounterX_6_1
-    SLICE_X8Y24.B5       net (fanout=5)        1.215   CounterX_6_1
-    SLICE_X8Y24.B        Tilo                  0.254   GND_1_o_CounterX[10]_LessThan_147_o
-                                                       GND_1_o_CounterX[10]_LessThan_212_o21
-    SLICE_X21Y27.D2      net (fanout=18)       1.635   GND_1_o_CounterX[10]_LessThan_212_o2
-    SLICE_X21Y27.D       Tilo                  0.259   GND_1_o_CounterX[10]_LessThan_100_o
-                                                       GND_1_o_CounterX[10]_LessThan_100_o1
-    SLICE_X12Y24.B2      net (fanout=2)        2.237   GND_1_o_CounterX[10]_LessThan_100_o
-    SLICE_X12Y24.B       Tilo                  0.254   R_inv27
-                                                       R_inv228
-    SLICE_X18Y22.D4      net (fanout=1)        0.971   R_inv228
-    SLICE_X18Y22.D       Tilo                  0.235   N307
-                                                       R_inv240_SW0
-    SLICE_X18Y26.C2      net (fanout=1)        0.950   N307
-    SLICE_X18Y26.C       Tilo                  0.235   R_inv215
-                                                       R_inv241
-    SLICE_X19Y25.A1      net (fanout=1)        0.841   R_inv241
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X10Y22.AQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_1
+    SLICE_X9Y21.A3       net (fanout=10)       0.777   CounterX_0_1
+    SLICE_X9Y21.A        Tilo                  0.259   out_inv31
+                                                       banner/Msub_n0120_Madd_xor<1>11
+    SLICE_X5Y43.D5       net (fanout=37)       2.693   GND_6_o_GND_6_o_sub_47_OUT<0>1
+    SLICE_X5Y43.D        Tilo                  0.259   out_inv83
+                                                       out_inv83
+    SLICE_X5Y42.A4       net (fanout=1)        0.687   out_inv83
+    SLICE_X5Y42.A        Tilo                  0.259   out_inv81
+                                                       out_inv84
+    SLICE_X4Y46.C1       net (fanout=2)        1.507   out_inv84
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                      9.889ns (2.040ns logic, 7.849ns route)
-                                                       (20.6% logic, 79.4% route)
+    Total                                      9.789ns (1.931ns logic, 7.858ns route)
+                                                       (19.7% logic, 80.3% route)
 
 --------------------------------------------------------------------------------
-Slack:                  30.099ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_3_2 (FF)
-  Destination:          vga_R (FF)
+Slack:                  30.169ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_2 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      9.847ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.019ns (0.286 - 0.305)
+  Data Path Delay:      9.779ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -729,43 +686,42 @@ Slack:                  30.099ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_3_2 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_2 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X15Y21.BQ      Tcko                  0.430   CounterX_3_4
-                                                       syncgen/CounterX_3_2
-    SLICE_X14Y24.C4      net (fanout=11)       1.419   CounterX_3_2
-    SLICE_X14Y24.C       Tilo                  0.235   CounterX[10]_GND_1_o_LessThan_229_o
-                                                       CounterX[10]_GND_1_o_LessThan_195_o31
-    SLICE_X21Y26.B2      net (fanout=3)        1.822   CounterX[10]_GND_1_o_LessThan_195_o3
-    SLICE_X21Y26.B       Tilo                  0.259   GND_1_o_CounterX[10]_AND_14_o
-                                                       CounterX[10]_GND_1_o_LessThan_35_o11
-    SLICE_X14Y18.C4      net (fanout=9)        1.771   CounterX[10]_GND_1_o_LessThan_35_o
-    SLICE_X14Y18.CMUX    Tilo                  0.403   R_inv74
-                                                       R_inv70_G
-                                                       R_inv70
-    SLICE_X14Y18.A3      net (fanout=1)        0.877   R_inv73
-    SLICE_X14Y18.A       Tilo                  0.235   R_inv74
-                                                       R_inv75
-    SLICE_X18Y27.C3      net (fanout=1)        1.275   R_inv78
-    SLICE_X18Y27.C       Tilo                  0.235   R_inv107
-                                                       R_inv112
-    SLICE_X19Y25.A4      net (fanout=1)        0.513   R_inv114
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X10Y22.BQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_2
+    SLICE_X2Y16.A5       net (fanout=19)       1.860   CounterX_0_2
+    SLICE_X2Y16.A        Tilo                  0.235   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_lut[2]
+                                                       banner/Msub_n0120_Madd_xor<3>11
+    SLICE_X9Y21.B2       net (fanout=4)        1.857   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_lut[2]
+    SLICE_X9Y21.B        Tilo                  0.259   out_inv31
+                                                       out_inv51_SW0
+    SLICE_X4Y16.A6       net (fanout=1)        1.171   N34
+    SLICE_X4Y16.A        Tilo                  0.254   N35
+                                                       out_inv51
+    SLICE_X6Y16.D3       net (fanout=1)        0.856   out_inv51
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                      9.847ns (2.170ns logic, 7.677ns route)
-                                                       (22.0% logic, 78.0% route)
+    Total                                      9.779ns (1.889ns logic, 7.890ns route)
+                                                       (19.3% logic, 80.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  30.105ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  30.197ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_1_2 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      9.845ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      9.741ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.027ns (0.718 - 0.745)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -776,45 +732,42 @@ Slack:                  30.105ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_1_2 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X13Y18.B4      net (fanout=10)       1.434   CounterX_9_1
-    SLICE_X13Y18.B       Tilo                  0.259   CounterX[10]_GND_1_o_LessThan_537_o121
-                                                       CounterX[10]_GND_1_o_LessThan_537_o121_1
-    SLICE_X21Y26.B1      net (fanout=13)       1.907   CounterX[10]_GND_1_o_LessThan_537_o121
-    SLICE_X21Y26.B       Tilo                  0.259   GND_1_o_CounterX[10]_AND_14_o
-                                                       CounterX[10]_GND_1_o_LessThan_35_o11
-    SLICE_X17Y19.D4      net (fanout=9)        1.457   CounterX[10]_GND_1_o_LessThan_35_o
-    SLICE_X17Y19.D       Tilo                  0.259   SF8214
-                                                       SF82141
-    SLICE_X14Y18.B4      net (fanout=1)        0.778   SF8214
-    SLICE_X14Y18.B       Tilo                  0.235   R_inv74
-                                                       R_inv71
-    SLICE_X14Y18.A5      net (fanout=1)        0.196   R_inv74
-    SLICE_X14Y18.A       Tilo                  0.235   R_inv74
-                                                       R_inv75
-    SLICE_X18Y27.C3      net (fanout=1)        1.275   R_inv78
-    SLICE_X18Y27.C       Tilo                  0.235   R_inv107
-                                                       R_inv112
-    SLICE_X19Y25.A4      net (fanout=1)        0.513   R_inv114
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X6Y21.BQ       Tcko                  0.476   CounterX_1_4
+                                                       syncgen/CounterX_1_2
+    SLICE_X2Y16.A1       net (fanout=14)       1.822   CounterX_1_2
+    SLICE_X2Y16.A        Tilo                  0.235   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_lut[2]
+                                                       banner/Msub_n0120_Madd_xor<3>11
+    SLICE_X9Y21.B2       net (fanout=4)        1.857   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_lut[2]
+    SLICE_X9Y21.B        Tilo                  0.259   out_inv31
+                                                       out_inv51_SW0
+    SLICE_X4Y16.A6       net (fanout=1)        1.171   N34
+    SLICE_X4Y16.A        Tilo                  0.254   N35
+                                                       out_inv51
+    SLICE_X6Y16.D3       net (fanout=1)        0.856   out_inv51
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                      9.845ns (2.285ns logic, 7.560ns route)
-                                                       (23.2% logic, 76.8% route)
+    Total                                      9.741ns (1.889ns logic, 7.852ns route)
+                                                       (19.4% logic, 80.6% route)
 
 --------------------------------------------------------------------------------
-Slack:                  30.130ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_10_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  30.240ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_1_3 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      9.820ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      9.698ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.027ns (0.718 - 0.745)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -825,46 +778,42 @@ Slack:                  30.130ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_10_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_1_3 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y23.AQ      Tcko                  0.525   CounterX_10_3
-                                                       syncgen/CounterX_10_1
-    SLICE_X17Y26.B1      net (fanout=12)       0.982   CounterX_10_1
-    SLICE_X17Y26.B       Tilo                  0.259   N281
-                                                       GND_1_o_CounterX[10]_AND_109_o11_1
-    SLICE_X15Y20.A2      net (fanout=14)       2.430   GND_1_o_CounterX[10]_AND_109_o11
-    SLICE_X15Y20.A       Tilo                  0.259   R_inv118
-                                                       CounterX[10]_GND_1_o_LessThan_202_o11
-    SLICE_X20Y26.B6      net (fanout=3)        1.402   CounterX[10]_GND_1_o_LessThan_202_o
-    SLICE_X20Y26.B       Tilo                  0.254   R_inv51
-                                                       R_inv48
-    SLICE_X20Y26.D1      net (fanout=2)        0.605   R_inv51
-    SLICE_X20Y26.CMUX    Topdc                 0.456   R_inv51
-                                                       R_inv49_SW1_F
-                                                       R_inv49_SW1
-    SLICE_X14Y25.A5      net (fanout=1)        1.141   N244
-    SLICE_X14Y25.A       Tilo                  0.235   N243
-                                                       R_inv51
-    SLICE_X19Y25.B6      net (fanout=1)        0.410   R_inv54
-    SLICE_X19Y25.B       Tilo                  0.259   vga_B_OBUF
-                                                       R_inv59
-    SLICE_X19Y25.A5      net (fanout=1)        0.230   R_inv62
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X6Y21.CQ       Tcko                  0.476   CounterX_1_4
+                                                       syncgen/CounterX_1_3
+    SLICE_X5Y46.C5       net (fanout=13)       1.940   CounterX_1_3
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X6Y16.A3       net (fanout=16)       2.953   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X6Y16.A        Tilo                  0.235   out_inv61
+                                                       out_inv60_SW0
+    SLICE_X6Y16.C1       net (fanout=1)        0.538   N76
+    SLICE_X6Y16.C        Tilo                  0.235   out_inv61
+                                                       out_inv60
+    SLICE_X6Y16.D5       net (fanout=1)        0.251   out_inv60
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                      9.820ns (2.620ns logic, 7.200ns route)
-                                                       (26.7% logic, 73.3% route)
+    Total                                      9.698ns (1.870ns logic, 7.828ns route)
+                                                       (19.3% logic, 80.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  30.131ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_6_2 (FF)
-  Destination:          vga_R (FF)
+Slack:                  30.259ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_1_3 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      9.818ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.016ns (0.286 - 0.302)
+  Data Path Delay:      9.679ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.027ns (0.718 - 0.745)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -875,43 +824,42 @@ Slack:                  30.131ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_6_2 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_1_3 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X15Y22.BQ      Tcko                  0.430   CounterX_6_4
-                                                       syncgen/CounterX_6_2
-    SLICE_X14Y24.C3      net (fanout=5)        1.390   CounterX_6_2
-    SLICE_X14Y24.C       Tilo                  0.235   CounterX[10]_GND_1_o_LessThan_229_o
-                                                       CounterX[10]_GND_1_o_LessThan_195_o31
-    SLICE_X21Y26.B2      net (fanout=3)        1.822   CounterX[10]_GND_1_o_LessThan_195_o3
-    SLICE_X21Y26.B       Tilo                  0.259   GND_1_o_CounterX[10]_AND_14_o
-                                                       CounterX[10]_GND_1_o_LessThan_35_o11
-    SLICE_X14Y18.C4      net (fanout=9)        1.771   CounterX[10]_GND_1_o_LessThan_35_o
-    SLICE_X14Y18.CMUX    Tilo                  0.403   R_inv74
-                                                       R_inv70_G
-                                                       R_inv70
-    SLICE_X14Y18.A3      net (fanout=1)        0.877   R_inv73
-    SLICE_X14Y18.A       Tilo                  0.235   R_inv74
-                                                       R_inv75
-    SLICE_X18Y27.C3      net (fanout=1)        1.275   R_inv78
-    SLICE_X18Y27.C       Tilo                  0.235   R_inv107
-                                                       R_inv112
-    SLICE_X19Y25.A4      net (fanout=1)        0.513   R_inv114
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X6Y21.CQ       Tcko                  0.476   CounterX_1_4
+                                                       syncgen/CounterX_1_3
+    SLICE_X5Y46.C5       net (fanout=13)       1.940   CounterX_1_3
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X9Y21.D1       net (fanout=16)       2.751   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X9Y21.D        Tilo                  0.259   out_inv31
+                                                       out_inv31
+    SLICE_X9Y21.C6       net (fanout=1)        0.143   out_inv31
+    SLICE_X9Y21.C        Tilo                  0.259   out_inv31
+                                                       out_inv361
+    SLICE_X8Y17.D2       net (fanout=1)        1.002   out_inv36
+    SLICE_X8Y17.D        Tilo                  0.254   out_inv42
+                                                       out_inv42
+    SLICE_X8Y17.C4       net (fanout=1)        0.456   out_inv42
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                      9.818ns (2.170ns logic, 7.648ns route)
-                                                       (22.1% logic, 77.9% route)
+    Total                                      9.679ns (1.937ns logic, 7.742ns route)
+                                                       (20.0% logic, 80.0% route)
 
 --------------------------------------------------------------------------------
-Slack:                  30.157ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  30.300ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      9.793ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      9.648ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -922,45 +870,40 @@ Slack:                  30.157ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X17Y26.B3      net (fanout=10)       2.040   CounterX_9_1
-    SLICE_X17Y26.B       Tilo                  0.259   N281
-                                                       GND_1_o_CounterX[10]_AND_109_o11_1
-    SLICE_X21Y18.D1      net (fanout=14)       1.947   GND_1_o_CounterX[10]_AND_109_o11
-    SLICE_X21Y18.D       Tilo                  0.259   CounterX[10]_GND_1_o_LessThan_43_o
-                                                       CounterX[10]_GND_1_o_LessThan_43_o11
-    SLICE_X16Y26.D3      net (fanout=5)        1.423   CounterX[10]_GND_1_o_LessThan_43_o
-    SLICE_X16Y26.D       Tilo                  0.254   R_inv206
-                                                       R_inv206
-    SLICE_X16Y26.C6      net (fanout=1)        0.143   R_inv206
-    SLICE_X16Y26.C       Tilo                  0.255   R_inv206
-                                                       R_inv207
-    SLICE_X18Y26.D2      net (fanout=1)        0.956   R_inv207
-    SLICE_X18Y26.D       Tilo                  0.235   R_inv215
-                                                       R_inv215
-    SLICE_X18Y26.C6      net (fanout=1)        0.143   R_inv215
-    SLICE_X18Y26.C       Tilo                  0.235   R_inv215
-                                                       R_inv241
-    SLICE_X19Y25.A1      net (fanout=1)        0.841   R_inv241
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X10Y22.AQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_1
+    SLICE_X5Y46.C1       net (fanout=10)       2.957   CounterX_0_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X5Y41.B3       net (fanout=16)       1.036   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X5Y41.B        Tilo                  0.259   out_inv110
+                                                       out_inv104
+    SLICE_X5Y41.C4       net (fanout=1)        0.320   out_inv104
+    SLICE_X5Y41.C        Tilo                  0.259   out_inv110
+                                                       out_inv111
+    SLICE_X4Y46.C2       net (fanout=2)        1.210   out_inv111
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                      9.793ns (2.300ns logic, 7.493ns route)
-                                                       (23.5% logic, 76.5% route)
+    Total                                      9.648ns (1.931ns logic, 7.717ns route)
+                                                       (20.0% logic, 80.0% route)
 
 --------------------------------------------------------------------------------
-Slack:                  30.157ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_10_1 (FF)
-  Destination:          vga_R (FF)
+Slack:                  30.301ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      9.793ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      9.647ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -971,481 +914,40 @@ Slack:                  30.157ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_10_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y23.AQ      Tcko                  0.525   CounterX_10_3
-                                                       syncgen/CounterX_10_1
-    SLICE_X12Y20.A3      net (fanout=12)       1.064   CounterX_10_1
-    SLICE_X12Y20.A       Tilo                  0.254   N133
-                                                       GND_1_o_CounterX[10]_LessThan_169_o111
-    SLICE_X21Y27.D3      net (fanout=20)       1.595   GND_1_o_CounterX[10]_LessThan_169_o11
-    SLICE_X21Y27.D       Tilo                  0.259   GND_1_o_CounterX[10]_LessThan_100_o
-                                                       GND_1_o_CounterX[10]_LessThan_100_o1
-    SLICE_X12Y24.B2      net (fanout=2)        2.237   GND_1_o_CounterX[10]_LessThan_100_o
-    SLICE_X12Y24.B       Tilo                  0.254   R_inv27
-                                                       R_inv228
-    SLICE_X18Y22.D4      net (fanout=1)        0.971   R_inv228
-    SLICE_X18Y22.D       Tilo                  0.235   N307
-                                                       R_inv240_SW0
-    SLICE_X18Y26.C2      net (fanout=1)        0.950   N307
-    SLICE_X18Y26.C       Tilo                  0.235   R_inv215
-                                                       R_inv241
-    SLICE_X19Y25.A1      net (fanout=1)        0.841   R_inv241
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X10Y22.AQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_1
+    SLICE_X5Y46.C1       net (fanout=10)       2.957   CounterX_0_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X5Y42.B4       net (fanout=16)       0.828   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X5Y42.B        Tilo                  0.259   out_inv81
+                                                       out_inv79
+    SLICE_X5Y42.A5       net (fanout=1)        0.230   out_inv79
+    SLICE_X5Y42.A        Tilo                  0.259   out_inv81
+                                                       out_inv84
+    SLICE_X4Y46.C1       net (fanout=2)        1.507   out_inv84
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                      9.793ns (2.135ns logic, 7.658ns route)
-                                                       (21.8% logic, 78.2% route)
-
---------------------------------------------------------------------------------
-Slack:                  30.208ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      9.742ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X16Y27.B2      net (fanout=10)       2.022   CounterX_9_1
-    SLICE_X16Y27.B       Tilo                  0.254   N100
-                                                       GND_1_o_CounterX[10]_LessThan_169_o111_1
-    SLICE_X19Y19.D5      net (fanout=14)       1.204   GND_1_o_CounterX[10]_LessThan_169_o111
-    SLICE_X19Y19.D       Tilo                  0.259   CounterX[10]_GND_1_o_LessThan_138_o
-                                                       CounterX[10]_GND_1_o_LessThan_138_o1
-    SLICE_X22Y21.D4      net (fanout=3)        1.158   CounterX[10]_GND_1_o_LessThan_138_o
-    SLICE_X22Y21.D       Tilo                  0.235   GND_1_o_CounterX[10]_AND_74_o
-                                                       GND_1_o_CounterX[10]_AND_74_o1
-    SLICE_X20Y23.A1      net (fanout=2)        0.991   GND_1_o_CounterX[10]_AND_74_o
-    SLICE_X20Y23.A       Tilo                  0.254   N203
-                                                       R_inv169
-    SLICE_X16Y23.B3      net (fanout=1)        1.048   R_inv170
-    SLICE_X16Y23.B       Tilo                  0.254   CounterX_10_3
-                                                       R_inv170
-    SLICE_X16Y23.C4      net (fanout=1)        0.330   R_inv171
-    SLICE_X16Y23.C       Tilo                  0.255   CounterX_10_3
-                                                       R_inv242_SW0
-    SLICE_X19Y25.A6      net (fanout=1)        0.675   N207
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      9.742ns (2.314ns logic, 7.428ns route)
-                                                       (23.8% logic, 76.2% route)
-
---------------------------------------------------------------------------------
-Slack:                  30.217ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_10_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      9.733ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_10_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X16Y23.AQ      Tcko                  0.525   CounterX_10_3
-                                                       syncgen/CounterX_10_1
-    SLICE_X13Y18.B3      net (fanout=12)       1.101   CounterX_10_1
-    SLICE_X13Y18.B       Tilo                  0.259   CounterX[10]_GND_1_o_LessThan_537_o121
-                                                       CounterX[10]_GND_1_o_LessThan_537_o121_1
-    SLICE_X21Y26.B1      net (fanout=13)       1.907   CounterX[10]_GND_1_o_LessThan_537_o121
-    SLICE_X21Y26.B       Tilo                  0.259   GND_1_o_CounterX[10]_AND_14_o
-                                                       CounterX[10]_GND_1_o_LessThan_35_o11
-    SLICE_X14Y18.C4      net (fanout=9)        1.771   CounterX[10]_GND_1_o_LessThan_35_o
-    SLICE_X14Y18.CMUX    Tilo                  0.403   R_inv74
-                                                       R_inv70_G
-                                                       R_inv70
-    SLICE_X14Y18.A3      net (fanout=1)        0.877   R_inv73
-    SLICE_X14Y18.A       Tilo                  0.235   R_inv74
-                                                       R_inv75
-    SLICE_X18Y27.C3      net (fanout=1)        1.275   R_inv78
-    SLICE_X18Y27.C       Tilo                  0.235   R_inv107
-                                                       R_inv112
-    SLICE_X19Y25.A4      net (fanout=1)        0.513   R_inv114
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      9.733ns (2.289ns logic, 7.444ns route)
-                                                       (23.5% logic, 76.5% route)
-
---------------------------------------------------------------------------------
-Slack:                  30.225ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_3_2 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      9.721ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.019ns (0.286 - 0.305)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_3_2 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X15Y21.BQ      Tcko                  0.430   CounterX_3_4
-                                                       syncgen/CounterX_3_2
-    SLICE_X14Y24.C4      net (fanout=11)       1.419   CounterX_3_2
-    SLICE_X14Y24.C       Tilo                  0.235   CounterX[10]_GND_1_o_LessThan_229_o
-                                                       CounterX[10]_GND_1_o_LessThan_195_o31
-    SLICE_X21Y26.B2      net (fanout=3)        1.822   CounterX[10]_GND_1_o_LessThan_195_o3
-    SLICE_X21Y26.B       Tilo                  0.259   GND_1_o_CounterX[10]_AND_14_o
-                                                       CounterX[10]_GND_1_o_LessThan_35_o11
-    SLICE_X17Y19.D4      net (fanout=9)        1.457   CounterX[10]_GND_1_o_LessThan_35_o
-    SLICE_X17Y19.D       Tilo                  0.259   SF8214
-                                                       SF82141
-    SLICE_X14Y18.B4      net (fanout=1)        0.778   SF8214
-    SLICE_X14Y18.B       Tilo                  0.235   R_inv74
-                                                       R_inv71
-    SLICE_X14Y18.A5      net (fanout=1)        0.196   R_inv74
-    SLICE_X14Y18.A       Tilo                  0.235   R_inv74
-                                                       R_inv75
-    SLICE_X18Y27.C3      net (fanout=1)        1.275   R_inv78
-    SLICE_X18Y27.C       Tilo                  0.235   R_inv107
-                                                       R_inv112
-    SLICE_X19Y25.A4      net (fanout=1)        0.513   R_inv114
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      9.721ns (2.261ns logic, 7.460ns route)
-                                                       (23.3% logic, 76.7% route)
-
---------------------------------------------------------------------------------
-Slack:                  30.257ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_6_2 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      9.692ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.016ns (0.286 - 0.302)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_6_2 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X15Y22.BQ      Tcko                  0.430   CounterX_6_4
-                                                       syncgen/CounterX_6_2
-    SLICE_X14Y24.C3      net (fanout=5)        1.390   CounterX_6_2
-    SLICE_X14Y24.C       Tilo                  0.235   CounterX[10]_GND_1_o_LessThan_229_o
-                                                       CounterX[10]_GND_1_o_LessThan_195_o31
-    SLICE_X21Y26.B2      net (fanout=3)        1.822   CounterX[10]_GND_1_o_LessThan_195_o3
-    SLICE_X21Y26.B       Tilo                  0.259   GND_1_o_CounterX[10]_AND_14_o
-                                                       CounterX[10]_GND_1_o_LessThan_35_o11
-    SLICE_X17Y19.D4      net (fanout=9)        1.457   CounterX[10]_GND_1_o_LessThan_35_o
-    SLICE_X17Y19.D       Tilo                  0.259   SF8214
-                                                       SF82141
-    SLICE_X14Y18.B4      net (fanout=1)        0.778   SF8214
-    SLICE_X14Y18.B       Tilo                  0.235   R_inv74
-                                                       R_inv71
-    SLICE_X14Y18.A5      net (fanout=1)        0.196   R_inv74
-    SLICE_X14Y18.A       Tilo                  0.235   R_inv74
-                                                       R_inv75
-    SLICE_X18Y27.C3      net (fanout=1)        1.275   R_inv78
-    SLICE_X18Y27.C       Tilo                  0.235   R_inv107
-                                                       R_inv112
-    SLICE_X19Y25.A4      net (fanout=1)        0.513   R_inv114
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      9.692ns (2.261ns logic, 7.431ns route)
-                                                       (23.3% logic, 76.7% route)
-
---------------------------------------------------------------------------------
-Slack:                  30.268ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      9.682ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X16Y27.B2      net (fanout=10)       2.022   CounterX_9_1
-    SLICE_X16Y27.B       Tilo                  0.254   N100
-                                                       GND_1_o_CounterX[10]_LessThan_169_o111_1
-    SLICE_X17Y26.C2      net (fanout=14)       0.874   GND_1_o_CounterX[10]_LessThan_169_o111
-    SLICE_X17Y26.C       Tilo                  0.259   N281
-                                                       GND_1_o_CounterX[10]_LessThan_185_o11
-    SLICE_X21Y18.C1      net (fanout=4)        1.642   GND_1_o_CounterX[10]_LessThan_185_o
-    SLICE_X21Y18.C       Tilo                  0.259   CounterX[10]_GND_1_o_LessThan_43_o
-                                                       R_inv222
-    SLICE_X17Y28.D6      net (fanout=1)        1.187   R_inv222
-    SLICE_X17Y28.D       Tilo                  0.259   R_inv223
-                                                       R_inv223
-    SLICE_X17Y28.C6      net (fanout=1)        0.143   R_inv223
-    SLICE_X17Y28.C       Tilo                  0.259   R_inv223
-                                                       R_inv225
-    SLICE_X18Y26.C5      net (fanout=1)        0.645   R_inv225
-    SLICE_X18Y26.C       Tilo                  0.235   R_inv215
-                                                       R_inv241
-    SLICE_X19Y25.A1      net (fanout=1)        0.841   R_inv241
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      9.682ns (2.328ns logic, 7.354ns route)
-                                                       (24.0% logic, 76.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  30.282ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_3_2 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      9.664ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.019ns (0.286 - 0.305)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_3_2 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X15Y21.BQ      Tcko                  0.430   CounterX_3_4
-                                                       syncgen/CounterX_3_2
-    SLICE_X23Y22.A3      net (fanout=11)       1.670   CounterX_3_2
-    SLICE_X23Y22.A       Tilo                  0.259   N233
-                                                       CounterX[10]_GND_1_o_LessThan_138_o21
-    SLICE_X17Y17.A3      net (fanout=12)       1.413   CounterX[10]_GND_1_o_LessThan_138_o2
-    SLICE_X17Y17.A       Tilo                  0.259   N238
-                                                       CounterX[10]_GND_1_o_LessThan_131_o11
-    SLICE_X16Y25.D2      net (fanout=1)        1.615   CounterX[10]_GND_1_o_LessThan_131_o
-    SLICE_X16Y25.D       Tilo                  0.254   R_inv216
-                                                       R_inv216
-    SLICE_X18Y22.C6      net (fanout=1)        0.644   R_inv216
-    SLICE_X18Y22.C       Tilo                  0.235   N307
-                                                       R_inv218
-    SLICE_X18Y22.D5      net (fanout=1)        0.251   R_inv218
-    SLICE_X18Y22.D       Tilo                  0.235   N307
-                                                       R_inv240_SW0
-    SLICE_X18Y26.C2      net (fanout=1)        0.950   N307
-    SLICE_X18Y26.C       Tilo                  0.235   R_inv215
-                                                       R_inv241
-    SLICE_X19Y25.A1      net (fanout=1)        0.841   R_inv241
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      9.664ns (2.280ns logic, 7.384ns route)
-                                                       (23.6% logic, 76.4% route)
-
---------------------------------------------------------------------------------
-Slack:                  30.291ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      9.659ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X17Y26.B3      net (fanout=10)       2.040   CounterX_9_1
-    SLICE_X17Y26.B       Tilo                  0.259   N281
-                                                       GND_1_o_CounterX[10]_AND_109_o11_1
-    SLICE_X19Y18.B5      net (fanout=14)       1.224   GND_1_o_CounterX[10]_AND_109_o11
-    SLICE_X19Y18.B       Tilo                  0.259   N134
-                                                       CounterX[10]_GND_1_o_LessThan_92_o11
-    SLICE_X14Y20.B2      net (fanout=1)        1.195   CounterX[10]_GND_1_o_LessThan_92_o
-    SLICE_X14Y20.B       Tilo                  0.235   N275
-                                                       GND_1_o_CounterX[10]_AND_48_o1
-    SLICE_X14Y20.D1      net (fanout=3)        0.555   GND_1_o_CounterX[10]_AND_48_o
-    SLICE_X14Y20.D       Tilo                  0.235   N275
-                                                       R_inv146_SW0
-    SLICE_X15Y23.A3      net (fanout=1)        0.757   N275
-    SLICE_X15Y23.A       Tilo                  0.259   R_inv141
-                                                       R_inv146
-    SLICE_X15Y23.C2      net (fanout=1)        0.530   R_inv148
-    SLICE_X15Y23.C       Tilo                  0.259   R_inv141
-                                                       R_inv147
-    SLICE_X19Y25.A2      net (fanout=1)        1.049   R_inv149
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      9.659ns (2.309ns logic, 7.350ns route)
-                                                       (23.9% logic, 76.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  30.322ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      9.628ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X17Y18.B4      net (fanout=10)       1.165   CounterX_9_1
-    SLICE_X17Y18.B       Tilo                  0.259   GND_1_o_CounterX[10]_LessThan_653_o111
-                                                       GND_1_o_CounterX[10]_LessThan_653_o111_1
-    SLICE_X13Y23.A2      net (fanout=13)       2.135   GND_1_o_CounterX[10]_LessThan_653_o111
-    SLICE_X13Y23.A       Tilo                  0.259   CounterX_5_7
-                                                       GND_1_o_CounterX[10]_LessThan_64_o11
-    SLICE_X14Y23.B5      net (fanout=5)        0.459   GND_1_o_CounterX[10]_LessThan_64_o
-    SLICE_X14Y23.B       Tilo                  0.235   CounterX[10]_GND_1_o_LessThan_418_o21
-                                                       GND_1_o_GND_1_o_OR_72_o1
-    SLICE_X20Y23.C2      net (fanout=2)        1.503   GND_1_o_GND_1_o_OR_72_o
-    SLICE_X20Y23.C       Tilo                  0.255   N203
-                                                       R_inv172
-    SLICE_X16Y23.D1      net (fanout=1)        1.228   R_inv173
-    SLICE_X16Y23.D       Tilo                  0.254   CounterX_10_3
-                                                       R_inv242_SW0_SW0
-    SLICE_X16Y23.C6      net (fanout=1)        0.143   N319
-    SLICE_X16Y23.C       Tilo                  0.255   CounterX_10_3
-                                                       R_inv242_SW0
-    SLICE_X19Y25.A6      net (fanout=1)        0.675   N207
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      9.628ns (2.320ns logic, 7.308ns route)
-                                                       (24.1% logic, 75.9% route)
-
---------------------------------------------------------------------------------
-Slack:                  30.327ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_10_1 (FF)
-  Destination:          vga_R (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      9.623ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_10_1 to vga_R
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X16Y23.AQ      Tcko                  0.525   CounterX_10_3
-                                                       syncgen/CounterX_10_1
-    SLICE_X17Y18.B1      net (fanout=12)       1.480   CounterX_10_1
-    SLICE_X17Y18.B       Tilo                  0.259   GND_1_o_CounterX[10]_LessThan_653_o111
-                                                       GND_1_o_CounterX[10]_LessThan_653_o111_1
-    SLICE_X13Y24.A3      net (fanout=13)       1.367   GND_1_o_CounterX[10]_LessThan_653_o111
-    SLICE_X13Y24.A       Tilo                  0.259   SF631
-                                                       GND_1_o_CounterX[10]_LessThan_62_o11
-    SLICE_X14Y23.B2      net (fanout=2)        0.812   GND_1_o_CounterX[10]_LessThan_62_o
-    SLICE_X14Y23.B       Tilo                  0.235   CounterX[10]_GND_1_o_LessThan_418_o21
-                                                       GND_1_o_GND_1_o_OR_72_o1
-    SLICE_X20Y23.C2      net (fanout=2)        1.503   GND_1_o_GND_1_o_OR_72_o
-    SLICE_X20Y23.C       Tilo                  0.255   N203
-                                                       R_inv172
-    SLICE_X16Y23.D1      net (fanout=1)        1.228   R_inv173
-    SLICE_X16Y23.D       Tilo                  0.254   CounterX_10_3
-                                                       R_inv242_SW0_SW0
-    SLICE_X16Y23.C6      net (fanout=1)        0.143   N319
-    SLICE_X16Y23.C       Tilo                  0.255   CounterX_10_3
-                                                       R_inv242_SW0
-    SLICE_X19Y25.A6      net (fanout=1)        0.675   N207
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
-    -------------------------------------------------  ---------------------------
-    Total                                      9.623ns (2.415ns logic, 7.208ns route)
-                                                       (25.1% logic, 74.9% route)
+    Total                                      9.647ns (1.931ns logic, 7.716ns route)
+                                                       (20.0% logic, 80.0% route)
 
 --------------------------------------------------------------------------------
 Slack:                  30.333ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               syncgen/CounterX_9_1 (FF)
-  Destination:          vga_R (FF)
+  Source:               syncgen/CounterX_0_1 (FF)
+  Destination:          vga_G (FF)
   Requirement:          40.000ns
-  Data Path Delay:      9.617ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.015ns (0.286 - 0.301)
+  Data Path Delay:      9.615ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.035ns
@@ -1456,38 +958,466 @@ Slack:                  30.333ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: syncgen/CounterX_9_1 to vga_R
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_1 to vga_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y23.AQ      Tcko                  0.430   CounterX_9_3
-                                                       syncgen/CounterX_9_1
-    SLICE_X12Y20.A5      net (fanout=10)       0.983   CounterX_9_1
-    SLICE_X12Y20.A       Tilo                  0.254   N133
-                                                       GND_1_o_CounterX[10]_LessThan_169_o111
-    SLICE_X21Y27.D3      net (fanout=20)       1.595   GND_1_o_CounterX[10]_LessThan_169_o11
-    SLICE_X21Y27.D       Tilo                  0.259   GND_1_o_CounterX[10]_LessThan_100_o
-                                                       GND_1_o_CounterX[10]_LessThan_100_o1
-    SLICE_X12Y24.B2      net (fanout=2)        2.237   GND_1_o_CounterX[10]_LessThan_100_o
-    SLICE_X12Y24.B       Tilo                  0.254   R_inv27
-                                                       R_inv228
-    SLICE_X18Y22.D4      net (fanout=1)        0.971   R_inv228
-    SLICE_X18Y22.D       Tilo                  0.235   N307
-                                                       R_inv240_SW0
-    SLICE_X18Y26.C2      net (fanout=1)        0.950   N307
-    SLICE_X18Y26.C       Tilo                  0.235   R_inv215
-                                                       R_inv241
-    SLICE_X19Y25.A1      net (fanout=1)        0.841   R_inv241
-    SLICE_X19Y25.CLK     Tas                   0.373   vga_B_OBUF
-                                                       vga_R_rstpot
-                                                       vga_R
+    SLICE_X10Y22.AQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_1
+    SLICE_X5Y46.C1       net (fanout=10)       2.957   CounterX_0_1
+    SLICE_X5Y46.C        Tilo                  0.259   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11_1
+    SLICE_X5Y40.D5       net (fanout=16)       0.938   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_xor<1>11
+    SLICE_X5Y40.D        Tilo                  0.259   out_inv106
+                                                       out_inv106
+    SLICE_X5Y41.C5       net (fanout=1)        0.385   out_inv106
+    SLICE_X5Y41.C        Tilo                  0.259   out_inv110
+                                                       out_inv111
+    SLICE_X4Y46.C2       net (fanout=2)        1.210   out_inv111
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
     -------------------------------------------------  ---------------------------
-    Total                                      9.617ns (2.040ns logic, 7.577ns route)
-                                                       (21.2% logic, 78.8% route)
+    Total                                      9.615ns (1.931ns logic, 7.684ns route)
+                                                       (20.1% logic, 79.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  30.383ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_3_1 (FF)
+  Destination:          vga_G (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.557ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.025ns (0.718 - 0.743)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_3_1 to vga_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y28.AQ      Tcko                  0.476   CounterX_3_4
+                                                       syncgen/CounterX_3_1
+    SLICE_X2Y16.A6       net (fanout=11)       1.638   CounterX_3_1
+    SLICE_X2Y16.A        Tilo                  0.235   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_lut[2]
+                                                       banner/Msub_n0120_Madd_xor<3>11
+    SLICE_X9Y21.B2       net (fanout=4)        1.857   Msub_GND_6_o_GND_6_o_sub_47_OUT<6:0>_lut[2]
+    SLICE_X9Y21.B        Tilo                  0.259   out_inv31
+                                                       out_inv51_SW0
+    SLICE_X4Y16.A6       net (fanout=1)        1.171   N34
+    SLICE_X4Y16.A        Tilo                  0.254   N35
+                                                       out_inv51
+    SLICE_X6Y16.D3       net (fanout=1)        0.856   out_inv51
+    SLICE_X6Y16.D        Tilo                  0.235   out_inv61
+                                                       out_inv61
+    SLICE_X8Y17.C5       net (fanout=1)        0.696   out_inv61
+    SLICE_X8Y17.C        Tilo                  0.255   out_inv42
+                                                       out_inv62
+    SLICE_X8Y32.CX       net (fanout=1)        1.450   out_inv62
+    SLICE_X8Y32.CLK      Tdick                 0.175   vga_B_OBUF
+                                                       vga_G_rstpot
+                                                       vga_G
+    -------------------------------------------------  ---------------------------
+    Total                                      9.557ns (1.889ns logic, 7.668ns route)
+                                                       (19.8% logic, 80.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  30.447ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_1_1 (FF)
+  Destination:          vga_G (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.491ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.027ns (0.718 - 0.745)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_1_1 to vga_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y21.AQ       Tcko                  0.476   CounterX_1_4
+                                                       syncgen/CounterX_1_1
+    SLICE_X10Y22.A5      net (fanout=5)        0.930   CounterX_1_1
+    SLICE_X10Y22.A       Tilo                  0.235   CounterX_0_3
+                                                       banner/GND_6_o_PWR_9_o_AND_32_o111
+    SLICE_X5Y42.D3       net (fanout=11)       2.594   GND_6_o_PWR_9_o_AND_32_o11
+    SLICE_X5Y42.D        Tilo                  0.259   out_inv81
+                                                       out_inv81
+    SLICE_X5Y42.A3       net (fanout=1)        0.359   out_inv81
+    SLICE_X5Y42.A        Tilo                  0.259   out_inv81
+                                                       out_inv84
+    SLICE_X4Y46.C1       net (fanout=2)        1.507   out_inv84
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
+    -------------------------------------------------  ---------------------------
+    Total                                      9.491ns (1.907ns logic, 7.584ns route)
+                                                       (20.1% logic, 79.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  30.485ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_1_1 (FF)
+  Destination:          vga_G (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.453ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.027ns (0.718 - 0.745)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_1_1 to vga_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y21.AQ       Tcko                  0.476   CounterX_1_4
+                                                       syncgen/CounterX_1_1
+    SLICE_X9Y21.A6       net (fanout=5)        0.441   CounterX_1_1
+    SLICE_X9Y21.A        Tilo                  0.259   out_inv31
+                                                       banner/Msub_n0120_Madd_xor<1>11
+    SLICE_X5Y43.D5       net (fanout=37)       2.693   GND_6_o_GND_6_o_sub_47_OUT<0>1
+    SLICE_X5Y43.D        Tilo                  0.259   out_inv83
+                                                       out_inv83
+    SLICE_X5Y42.A4       net (fanout=1)        0.687   out_inv83
+    SLICE_X5Y42.A        Tilo                  0.259   out_inv81
+                                                       out_inv84
+    SLICE_X4Y46.C1       net (fanout=2)        1.507   out_inv84
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
+    -------------------------------------------------  ---------------------------
+    Total                                      9.453ns (1.931ns logic, 7.522ns route)
+                                                       (20.4% logic, 79.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  30.576ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               banner/part2/Mram_outdata2 (RAM)
+  Destination:          vga_G (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.369ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.020ns (0.326 - 0.346)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: banner/part2/Mram_outdata2 to vga_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y20.DOA4    Trcko_DOA             2.100   banner/part2/Mram_outdata2
+                                                       banner/part2/Mram_outdata2
+    SLICE_X5Y40.C1       net (fanout=1)        1.041   M_part2_outdata[40]
+    SLICE_X5Y40.C        Tilo                  0.259   out_inv106
+                                                       out_inv105
+    SLICE_X5Y40.D2       net (fanout=1)        0.984   out_inv105
+    SLICE_X5Y40.D        Tilo                  0.259   out_inv106
+                                                       out_inv106
+    SLICE_X5Y41.C5       net (fanout=1)        0.385   out_inv106
+    SLICE_X5Y41.C        Tilo                  0.259   out_inv110
+                                                       out_inv111
+    SLICE_X4Y46.C2       net (fanout=2)        1.210   out_inv111
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
+    -------------------------------------------------  ---------------------------
+    Total                                      9.369ns (3.555ns logic, 5.814ns route)
+                                                       (37.9% logic, 62.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  30.622ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_1 (FF)
+  Destination:          vga_G (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.326ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_1 to vga_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y22.AQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_1
+    SLICE_X9Y21.A3       net (fanout=10)       0.777   CounterX_0_1
+    SLICE_X9Y21.A        Tilo                  0.259   out_inv31
+                                                       banner/Msub_n0120_Madd_xor<1>11
+    SLICE_X5Y42.D4       net (fanout=37)       2.558   GND_6_o_GND_6_o_sub_47_OUT<0>1
+    SLICE_X5Y42.D        Tilo                  0.259   out_inv81
+                                                       out_inv81
+    SLICE_X5Y42.A3       net (fanout=1)        0.359   out_inv81
+    SLICE_X5Y42.A        Tilo                  0.259   out_inv81
+                                                       out_inv84
+    SLICE_X4Y46.C1       net (fanout=2)        1.507   out_inv84
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
+    -------------------------------------------------  ---------------------------
+    Total                                      9.326ns (1.931ns logic, 7.395ns route)
+                                                       (20.7% logic, 79.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  30.664ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_1 (FF)
+  Destination:          vga_G (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.284ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_1 to vga_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y22.AQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_1
+    SLICE_X10Y22.A6      net (fanout=10)       0.174   CounterX_0_1
+    SLICE_X10Y22.A       Tilo                  0.235   CounterX_0_3
+                                                       banner/GND_6_o_PWR_9_o_AND_32_o111
+    SLICE_X5Y43.D6       net (fanout=11)       2.815   GND_6_o_PWR_9_o_AND_32_o11
+    SLICE_X5Y43.D        Tilo                  0.259   out_inv83
+                                                       out_inv83
+    SLICE_X5Y42.A4       net (fanout=1)        0.687   out_inv83
+    SLICE_X5Y42.A        Tilo                  0.259   out_inv81
+                                                       out_inv84
+    SLICE_X4Y46.C1       net (fanout=2)        1.507   out_inv84
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
+    -------------------------------------------------  ---------------------------
+    Total                                      9.284ns (1.907ns logic, 7.377ns route)
+                                                       (20.5% logic, 79.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  30.669ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_2 (FF)
+  Destination:          vga_G (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.279ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_2 to vga_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y22.BQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_2
+    SLICE_X5Y43.C4       net (fanout=19)       2.322   CounterX_0_2
+    SLICE_X5Y43.C        Tilo                  0.259   out_inv83
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_15_OUT<5:0>_xor<3>11
+    SLICE_X4Y40.D4       net (fanout=15)       0.959   GND_6_o_GND_6_o_sub_15_OUT<3>1
+    SLICE_X4Y40.D        Tilo                  0.254   out_inv108
+                                                       out_inv108
+    SLICE_X5Y41.C3       net (fanout=1)        0.668   out_inv108
+    SLICE_X5Y41.C        Tilo                  0.259   out_inv110
+                                                       out_inv111
+    SLICE_X4Y46.C2       net (fanout=2)        1.210   out_inv111
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
+    -------------------------------------------------  ---------------------------
+    Total                                      9.279ns (1.926ns logic, 7.353ns route)
+                                                       (20.8% logic, 79.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  30.682ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_0_2 (FF)
+  Destination:          vga_G (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.266ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.017ns (0.718 - 0.735)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_0_2 to vga_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y22.BQ      Tcko                  0.476   CounterX_0_3
+                                                       syncgen/CounterX_0_2
+    SLICE_X5Y43.C4       net (fanout=19)       2.322   CounterX_0_2
+    SLICE_X5Y43.C        Tilo                  0.259   out_inv83
+                                                       banner/Msub_GND_6_o_GND_6_o_sub_15_OUT<5:0>_xor<3>11
+    SLICE_X5Y43.D3       net (fanout=15)       0.625   GND_6_o_GND_6_o_sub_15_OUT<3>1
+    SLICE_X5Y43.D        Tilo                  0.259   out_inv83
+                                                       out_inv83
+    SLICE_X5Y42.A4       net (fanout=1)        0.687   out_inv83
+    SLICE_X5Y42.A        Tilo                  0.259   out_inv81
+                                                       out_inv84
+    SLICE_X4Y46.C1       net (fanout=2)        1.507   out_inv84
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
+    -------------------------------------------------  ---------------------------
+    Total                                      9.266ns (1.931ns logic, 7.335ns route)
+                                                       (20.8% logic, 79.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  30.693ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               syncgen/CounterX_1_5 (FF)
+  Destination:          vga_G (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.247ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.025ns (0.718 - 0.743)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: syncgen/CounterX_1_5 to vga_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y19.AQ       Tcko                  0.525   CounterX_1_5
+                                                       syncgen/CounterX_1_5
+    SLICE_X5Y40.C5       net (fanout=11)       2.494   CounterX_1_5
+    SLICE_X5Y40.C        Tilo                  0.259   out_inv106
+                                                       out_inv105
+    SLICE_X5Y40.D2       net (fanout=1)        0.984   out_inv105
+    SLICE_X5Y40.D        Tilo                  0.259   out_inv106
+                                                       out_inv106
+    SLICE_X5Y41.C5       net (fanout=1)        0.385   out_inv106
+    SLICE_X5Y41.C        Tilo                  0.259   out_inv110
+                                                       out_inv111
+    SLICE_X4Y46.C2       net (fanout=2)        1.210   out_inv111
+    SLICE_X4Y46.C        Tilo                  0.255   out_inv93
+                                                       out_inv147_SW1_G
+    SLICE_X8Y32.C1       net (fanout=1)        2.194   N89
+    SLICE_X8Y32.CLK      Tas                   0.423   vga_B_OBUF
+                                                       vga_G_rstpot_G
+                                                       vga_G_rstpot
+                                                       vga_G
+    -------------------------------------------------  ---------------------------
+    Total                                      9.247ns (1.980ns logic, 7.267ns route)
+                                                       (21.4% logic, 78.6% route)
 
 --------------------------------------------------------------------------------
 
 Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 36.430ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: banner/part1/Mram_outdata1/CLKA
+  Logical resource: banner/part1/Mram_outdata1/CLKA
+  Location pin: RAMB16_X0Y14.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 36.430ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: banner/part1/Mram_outdata2/CLKA
+  Logical resource: banner/part1/Mram_outdata2/CLKA
+  Location pin: RAMB16_X0Y16.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 36.430ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: banner/part2/Mram_outdata1/CLKA
+  Logical resource: banner/part2/Mram_outdata1/CLKA
+  Location pin: RAMB16_X0Y22.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 36.430ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: banner/part2/Mram_outdata2/CLKA
+  Logical resource: banner/part2/Mram_outdata2/CLKA
+  Location pin: RAMB16_X0Y20.CLKA
+  Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 37.334ns (period - min period limit)
   Period: 40.000ns
@@ -1500,233 +1430,201 @@ Slack: 37.334ns (period - min period limit)
 Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX[3]/CLK
-  Logical resource: syncgen/CounterX_0/CK
-  Location pin: SLICE_X12Y21.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX[3]/CLK
-  Logical resource: syncgen/CounterX_1/CK
-  Location pin: SLICE_X12Y21.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX[3]/CLK
-  Logical resource: syncgen/CounterX_2/CK
-  Location pin: SLICE_X12Y21.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX[3]/CLK
-  Logical resource: syncgen/CounterX_3/CK
-  Location pin: SLICE_X12Y21.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX[7]/CLK
-  Logical resource: syncgen/CounterX_4/CK
-  Location pin: SLICE_X12Y22.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX[7]/CLK
-  Logical resource: syncgen/CounterX_5/CK
-  Location pin: SLICE_X12Y22.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX[7]/CLK
-  Logical resource: syncgen/CounterX_6/CK
-  Location pin: SLICE_X12Y22.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX[7]/CLK
-  Logical resource: syncgen/CounterX_7/CK
-  Location pin: SLICE_X12Y22.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX[10]/CLK
-  Logical resource: syncgen/CounterX_8/CK
-  Location pin: SLICE_X12Y23.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX[10]/CLK
-  Logical resource: syncgen/CounterX_9/CK
-  Location pin: SLICE_X12Y23.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX[10]/CLK
-  Logical resource: syncgen/CounterX_10/CK
-  Location pin: SLICE_X12Y23.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX_8_4/CLK
-  Logical resource: syncgen/CounterX_8_1/CK
-  Location pin: SLICE_X12Y26.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX_8_4/CLK
-  Logical resource: syncgen/CounterX_8_2/CK
-  Location pin: SLICE_X12Y26.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX_8_4/CLK
-  Logical resource: syncgen/CounterX_8_3/CK
-  Location pin: SLICE_X12Y26.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX_8_4/CLK
-  Logical resource: syncgen/CounterX_8_4/CK
-  Location pin: SLICE_X12Y26.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterY_4_1/CLK
-  Logical resource: syncgen/CounterY_1_1/CK
-  Location pin: SLICE_X12Y29.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterY_4_1/CLK
-  Logical resource: syncgen/CounterY_4_1/CK
-  Location pin: SLICE_X12Y29.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX_4_6/CLK
-  Logical resource: syncgen/CounterX_4_5/CK
-  Location pin: SLICE_X16Y22.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX_4_6/CLK
-  Logical resource: syncgen/CounterX_4_6/CK
-  Location pin: SLICE_X16Y22.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX_10_3/CLK
-  Logical resource: syncgen/CounterX_10_1/CK
-  Location pin: SLICE_X16Y23.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX_10_3/CLK
-  Logical resource: syncgen/CounterX_10_2/CK
-  Location pin: SLICE_X16Y23.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.520ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: CounterX_10_3/CLK
-  Logical resource: syncgen/CounterX_10_3/CK
-  Location pin: SLICE_X16Y23.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
-  Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
-  Physical resource: CounterY[3]/CLK
+  Physical resource: CounterY_3/CLK
   Logical resource: syncgen/CounterY_0/CK
-  Location pin: SLICE_X14Y30.CLK
+  Location pin: SLICE_X8Y35.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
-  Physical resource: CounterY[3]/CLK
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterY_3/CLK
   Logical resource: syncgen/CounterY_1/CK
-  Location pin: SLICE_X14Y30.CLK
+  Location pin: SLICE_X8Y35.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
-  Physical resource: CounterY[3]/CLK
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterY_3/CLK
   Logical resource: syncgen/CounterY_2/CK
-  Location pin: SLICE_X14Y30.CLK
+  Location pin: SLICE_X8Y35.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
-  Physical resource: CounterY[3]/CLK
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterY_3/CLK
   Logical resource: syncgen/CounterY_3/CK
-  Location pin: SLICE_X14Y30.CLK
+  Location pin: SLICE_X8Y35.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
-  Physical resource: CounterY[7]/CLK
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterY_7/CLK
   Logical resource: syncgen/CounterY_4/CK
-  Location pin: SLICE_X14Y31.CLK
+  Location pin: SLICE_X8Y36.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 39.525ns (period - min period limit)
+Slack: 39.520ns (period - min period limit)
   Period: 40.000ns
-  Min period limit: 0.475ns (2105.263MHz) (Tcp)
-  Physical resource: CounterY[7]/CLK
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterY_7/CLK
   Logical resource: syncgen/CounterY_5/CK
-  Location pin: SLICE_X14Y31.CLK
+  Location pin: SLICE_X8Y36.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterY_7/CLK
+  Logical resource: syncgen/CounterY_6/CK
+  Location pin: SLICE_X8Y36.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterY_7/CLK
+  Logical resource: syncgen/CounterY_7/CK
+  Location pin: SLICE_X8Y36.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: M_word2_outdata[0]/CLK
+  Logical resource: banner/word2/address_reg_1/CK
+  Location pin: SLICE_X8Y18.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterX_1_5/CLK
+  Logical resource: syncgen/CounterX_1_5/CK
+  Location pin: SLICE_X8Y19.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterX_2_4/CLK
+  Logical resource: syncgen/CounterX_2_1/CK
+  Location pin: SLICE_X8Y29.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterX_2_4/CLK
+  Logical resource: syncgen/CounterX_2_2/CK
+  Location pin: SLICE_X8Y29.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterX_2_4/CLK
+  Logical resource: syncgen/CounterX_2_3/CK
+  Location pin: SLICE_X8Y29.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterX_2_4/CLK
+  Logical resource: syncgen/CounterX_2_4/CK
+  Location pin: SLICE_X8Y29.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterX_2_5/CLK
+  Logical resource: syncgen/CounterX_2_5/CK
+  Location pin: SLICE_X8Y31.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: vga_B_OBUF/CLK
+  Logical resource: vga_G/CK
+  Location pin: SLICE_X8Y32.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.520ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: CounterY_8/CLK
+  Logical resource: syncgen/CounterY_8/CK
+  Location pin: SLICE_X8Y37.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 39.525ns (period - min period limit)
   Period: 40.000ns
   Min period limit: 0.475ns (2105.263MHz) (Tcp)
-  Physical resource: CounterY[7]/CLK
-  Logical resource: syncgen/CounterY_6/CK
-  Location pin: SLICE_X14Y31.CLK
+  Physical resource: CounterX_3/CLK
+  Logical resource: syncgen/CounterX_0/CK
+  Location pin: SLICE_X10Y29.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.525ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Physical resource: CounterX_3/CLK
+  Logical resource: syncgen/CounterX_1/CK
+  Location pin: SLICE_X10Y29.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.525ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Physical resource: CounterX_3/CLK
+  Logical resource: syncgen/CounterX_2/CK
+  Location pin: SLICE_X10Y29.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.525ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Physical resource: CounterX_3/CLK
+  Logical resource: syncgen/CounterX_3/CK
+  Location pin: SLICE_X10Y29.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.525ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Physical resource: CounterX_7/CLK
+  Logical resource: syncgen/CounterX_4/CK
+  Location pin: SLICE_X10Y30.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.525ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Physical resource: CounterX_7/CLK
+  Logical resource: syncgen/CounterX_5/CK
+  Location pin: SLICE_X10Y30.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.525ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Physical resource: CounterX_7/CLK
+  Logical resource: syncgen/CounterX_6/CK
+  Location pin: SLICE_X10Y30.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 39.525ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Physical resource: CounterX_7/CLK
+  Logical resource: syncgen/CounterX_7/CK
+  Location pin: SLICE_X10Y30.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -1743,7 +1641,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   10.833|         |         |         |
+clk            |   11.667|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -1752,23 +1650,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 9739 paths, 0 nets, and 2984 connections
+Constraints cover 6690 paths, 0 nets, and 1641 connections
 
 Design statistics:
-   Minimum period:  10.833ns{1}   (Maximum frequency:  92.311MHz)
+   Minimum period:  11.667ns{1}   (Maximum frequency:  85.712MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sat Nov 25 00:14:18 2017 
+Analysis completed Fri Dec 01 23:36:14 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 223 MB
+Peak Memory Usage: 216 MB
 
 
 

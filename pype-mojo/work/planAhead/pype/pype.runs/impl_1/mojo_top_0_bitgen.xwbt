@@ -1,8 +1,8 @@
 INTSTYLE=pa
-INFILE=C:\Users\Joel\GitHub\pype\pype-mojo\work\planAhead\pype\pype.runs\impl_1\mojo_top_0_routed.ncd
-OUTFILE=C:\Users\Joel\GitHub\pype\pype-mojo\work\planAhead\pype\pype.runs\impl_1\mojo_top_0.bit
+INFILE=C:\Users\1002357\Desktop\pype536\work\planAhead\pype\pype.runs\impl_1\mojo_top_0_routed.ncd
+OUTFILE=C:\Users\1002357\Desktop\pype536\work\planAhead\pype\pype.runs\impl_1\mojo_top_0.bit
 FAMILY=Spartan6
 PART=xc6slx9-2tqg144
-WORKINGDIR=C:\Users\Joel\GitHub\pype\pype-mojo\work\planAhead\pype\pype.runs\impl_1
+WORKINGDIR=C:\Users\1002357\Desktop\pype536\work\planAhead\pype\pype.runs\impl_1
 LICENSE=WebPack
-USER_INFO=211409592_0_0_279
+USER_INFO=210774588_0_0_156
