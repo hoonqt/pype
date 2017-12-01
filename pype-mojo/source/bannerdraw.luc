@@ -1,0 +1,110 @@
+module bannerdraw (
+    input clk,  // clock
+    output out
+  ) {
+  
+  .clk(clk) {
+    hvsync_generator hvsync;
+    bannerpart1 part1;
+    bannerpart2 part2;
+    bannerword1 word1;
+    bannerword2 word2;
+    bannerword3 word3;
+    bannerword4 word4;
+  }
+  
+  sig counterh[11];
+  sig counterv[9];
+  sig fullcounter[57];
+  sig counter70[70];
+  sig counter71[71];
+
+  always {
+    counterh = hvsync.CounterX;
+    counterv = hvsync.CounterY;
+    
+    if (((counterh>=375 & counterh<=489)) &((counterv>=120)&(counterv<=248))) {
+        part1.address = counterv-120;
+        part2.address = 0;
+        word1.address = 0;
+        word2.address = 0;
+        word3.address = 0;
+        word4.address = 0;
+        fullcounter = part1.outdata;
+        out = fullcounter[56-((counterh-375)/2)];
+        
+      } 
+      
+    else if (((counterh>=491 & counterh<=605)) &((counterv>=120)&(counterv<=248))) {
+        word1.address = 0;
+        word2.address = 0;
+        word3.address = 0;
+        word4.address = 0;
+        part1.address = 0;
+        part2.address = counterv-120;
+        fullcounter = part2.outdata;
+        out = fullcounter[56-((counterh-491)/2)];
+        
+      } 
+      
+    else if (((counterh>=375 & counterh<=515)) &((counterv>=270)&(counterv<=284))) {
+        word1.address = counterv-270;
+        word2.address = 0;
+        word3.address = 0;
+        word4.address = 0;
+        part1.address = 0;
+        part2.address = 0;
+        counter70 = word1.outdata;
+        out = counter70[69-((counterh-375)/2)];
+        
+      } 
+      
+    else if (((counterh>=516 & counterh<=658)) &((counterv>=270)&(counterv<=284))) {
+        word1.address = 0;
+        word2.address = counterv-270;
+        word3.address = 0;
+        word4.address = 0;
+        part1.address = 0;
+        part2.address = 0;
+        counter71 = word2.outdata;
+        out = counter71[70-((counterh-516)/2)];
+        
+      } 
+      
+      
+    else if (((counterh>=659 & counterh<=799)) &((counterv>=270)&(counterv<=284))) {
+        word1.address = 0;
+        word2.address = 0;
+        word3.address = counterv-270;
+        word4.address = 0;
+        part1.address = 0;
+        part2.address = 0;
+        counter70 = word3.outdata;
+        out = counter70[69-((counterh-659)/2)];
+        
+      } 
+      
+     else if (((counterh>=797 & counterh<=942)) &((counterv>=270)&(counterv<=284))) {
+        word1.address = 0;
+        word2.address = 0;
+        word3.address = 0;
+        word4.address = counterv-270;
+        part1.address = 0;
+        part2.address = 0;
+        counter71 = word4.outdata;
+        out = counter71[70-((counterh-797)/2)];
+        
+      } 
+      
+    else {
+      part1.address = 0;
+      part2.address = 0;
+      word1.address = 0;
+      word2.address = 0;
+      word3.address = 0;
+      word4.address = 0;
+      out = 0;
+  }
+}
+  
+}

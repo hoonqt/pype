@@ -13,16 +13,16 @@ wire [8:0] CounterY;
 hvsync_generator syncgen(.clk(clk), .vga_h_sync(vga_h_sync), .vga_v_sync(vga_v_sync), 
   .inDisplayArea(inDisplayArea), .CounterX(CounterX), .CounterY(CounterY));
   
-tilesort tiles(.clk(clk), .tile1(tile1), .tile2(tile2), .tile3(tile3), .tile4(tile4), .tile5(tile5), .tile6(tile6));
+tilesort tiles(.clk(clk), .tile1(tile1), .tile2(tile2), .tile3(tile3), .tile4(tile4), .tile5(tile5));
+bannerdraw banner(.clk(clk), .out(out));
 
-borders border(.clk(clk), .bordered(bordered));
 
 
 
 /////////////////////////////////////////////////////////////////
-wire R = tile1|tile2|tile3|tile4|tile5|tile6|bordered;
-wire G = tile1|tile2|tile3|tile4|tile5|tile6|bordered;
-wire B = tile1|tile2|tile3|tile4|tile5|tile6|bordered;
+wire R = out;
+wire G = out;
+wire B = out;
 reg vga_R, vga_G, vga_B;
 always @(posedge clk)
 begin

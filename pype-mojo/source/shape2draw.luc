@@ -1,0 +1,72 @@
+module shape2draw (
+    input clk,  // clock
+    input horizontaloffset[10],
+    input verticaloffset[7],
+    
+    input orientation[3],
+    output bitout
+  )
+  {
+  
+  .clk(clk) {
+    hvsync_generator hvsync;
+    shape2base base;
+  }
+  
+
+  
+  sig counterh[11];
+  sig counterv[9];
+  sig fullcounter[51];
+  var three[2];
+  
+  //Example for shape 1 in folder I send you, sry for screwing with numbering
+
+
+  always {
+    counterh = hvsync.CounterX;
+    counterv = hvsync.CounterY;
+    three = 3;
+    
+    if (((counterh>=375+horizontaloffset & counterh<=477+horizontaloffset)) &((counterv>=120+verticaloffset)&(counterv<=180+verticaloffset))) {
+        if (orientation == 0 | orientation == 1) {
+          //Reads from top most
+          base.address = counterv-verticaloffset-120;
+        }
+      
+        else {
+          //Read from bottom most
+          base.address = 120-(counterv-verticaloffset);
+        }
+      
+        //Refers to where data is gonna be taken from in the case, 
+      
+        if (orientation == 2 | orientation == 5) {
+           base.dataret = 1;
+        }
+      
+        else {
+            base.dataret = 0;
+        }
+        
+        fullcounter = base.outdata;
+        if (orientation == 0 | orientation == 1 | orientation == 3 | orientation == 4) {
+          bitout = fullcounter[51-((counterh-375-horizontaloffset)/2)];
+          }
+        else {
+          bitout = fullcounter[((counterh-375-horizontaloffset)/2)];
+      }
+        
+      }
+    
+    else {
+        base.address = 999;
+        base.dataret = 0;
+        bitout = 0;
+        
+    }
+    
+    
+    
+}
+}
